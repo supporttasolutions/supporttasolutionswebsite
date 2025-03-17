@@ -17,6 +17,7 @@ export default function Home() {
         <Connect/>
         <FooterTwo/>
         <Footer/>
+        <div></div>
       </div>
     </>
   );
