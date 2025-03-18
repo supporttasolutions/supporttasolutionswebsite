@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import FooterTwo from "./components/FooterTwo";
 import Navbar from "./components/navbar";
 import OurStack from "./components/OurStack";
+import Socialmedia from "./components/Socialmedia";
 import WhoAreWe from "./components/WhoAreWe";
 import Solutions from "./components/business_solutions";
 import Collaborations from "./components/collaborations";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <div>
         <Navbar />
+        <Socialmedia/>
         <Banner/>
         <WhoAreWe/>
         <Solutions/>
