@@ -1,15 +1,13 @@
 import { Input } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import Heading from "./Heading";
 
 function Connect() {
     return (
         <section className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px]">
             <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
-                <div className="container  flex flex-col justify-center lg:gap-[12px] xl:gap-[15px] text-center">
-                    <div className="xl:text-[20px] text-[#E08F34] font-semibold inter">Connect With Us</div>
-                    <div className="raleway xl:text-[40px] font-medium">Let's Build Something Amazing!</div>
-                </div>
+                <Heading description={"Let's Build Something Amazing!"} heading={"Connect with us"}/>
                 <div className="xl:gap-[120px] flex justify-between xl:px-[60px] w-full">
                     <div className="flex flex-col items-center lg:gap-[20px] w-[31%]">
                         <div className="raleway xl:text-[32px] font-medium">Give Your Ideas Life!</div>
@@ -85,12 +83,12 @@ function Connect() {
                             }}
                             className="w-full lg:h-[66px] xl:text-[22px] lg:text-[20px] raleway"
                         />
-                        <div className="flex flex-col xl:gap-[20px] lg:gap-[15px]">
+                        <div className="flex flex-col gap-[2px]">
                         <div className="xl:text-[20px] lg:text-[16px] text-[#9e9e9e] font-medium raleway">
-                            Share Your Thoughts
+                            Message
                         </div>
                         <textarea
-                            placeholder="About Project......"
+                            placeholder="Enter Message"
                             className="placeholder:text-[#00000080] outline-0 w-full xl:h-[150px] lg:h-[120px] border-[#0000004D] border-1 bg-[#FFFFFF] rounded-[8px] lg:p-[10px] xl:text-[20px] lg:text-[16px] resize-none focus:border-[#E08F34] hover:border-[#000]"
                         />
                         </div>
