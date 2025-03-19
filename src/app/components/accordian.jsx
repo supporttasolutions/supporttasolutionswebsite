@@ -3,96 +3,92 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary, {
-  accordionSummaryClasses,
-} from '@mui/material/AccordionSummary';
+import MuiAccordionSummary, { accordionSummaryClasses } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  '&:not(:last-child)': {
-    borderBottom: 0,
-  },
-  '&::before': {
-    display: 'none',
-  },
+))(() => ({
+  border: 'none', 
+  boxShadow: 'none', 
+  '&::before': { display: 'none' }, 
 }));
 
 const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    backgroundColor: 'rgba(0, 0, 0, .03)',
-    display: 'flex',  
-    justifyContent: 'space-between', /* Ensures text & icon are spaced */
-    alignItems: 'center',
-    [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]: {
-      transform: 'rotate(90deg)',
-    },
-    [`& .${accordionSummaryClasses.content}`]: {
-      marginRight: theme.spacing(1), /* Moves text slightly to the left */
-    },
-  }));
+<MuiAccordionSummary
+    expandIcon={
+      <ArrowForwardIosSharpIcon 
+        sx={{ 
+          fontSize: '1.5rem', // Increase size
+          color: '#E08F34', 
+          fontWeight: 'bold', 
+          stroke: "#E08F34", 
+          strokeWidth: 1 // Make it bolder
+        }} 
+      />
+    }
+    {...props}
+  />
+))(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: theme.spacing(2, 0),
+  [`& .${accordionSummaryClasses.expandIconWrapper}`]: {
+    transform: 'rotate(90deg)', 
+    transition: 'transform 0.3s ease',
+  },
+  [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]: {
+    transform: 'rotate(-90deg)', 
+  },
+  [`& .${accordionSummaryClasses.content}`]: {
+    marginRight: theme.spacing(1),
+  },
   
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
+const AccordionDetails = styled(MuiAccordionDetails)(() => ({
+  padding: '15px 0',
+  textAlign:"start"
+ 
+}));
+
+const StyledTypography = styled(Typography)({
+  fontSize: "34px",
+  fontWeight: "regular",
+});
+
+
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = useState('panel1');
+  const [expanded, setExpanded] = useState(null);
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
+    setExpanded(newExpanded ? panel : null);
   };
 
   return (
     <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography component="span">Collapsible Group Item #1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography component="span">Collapsible Group Item #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography component="span">Collapsible Group Item #3</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      {[
+        "Customer-First Solutions",
+        "Agility Strategy Development",
+        "Creative Excellence",
+        "3 Months Warranty",
+      ].map((title, index) => (
+        <div key={index}>
+          <Accordion expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+            <AccordionSummary>
+              <StyledTypography component="span">{title}</StyledTypography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <hr className="border-t border-[#E08F3499]" /> 
+        </div>
+      ))}
     </div>
   );
 }
