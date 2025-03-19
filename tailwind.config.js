@@ -9,6 +9,7 @@ module.exports = {
           raleway: ["Raleway", "sans-serif"],
           sora: ["Sora", "sans-serif"],
         },
+        
       },
     },
     plugins: [],
