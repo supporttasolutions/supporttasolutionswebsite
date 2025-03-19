@@ -25,7 +25,7 @@ function OurStack() {
                         <div
                             key={index}
                             className="xl:w-[calc(25%-75px)] lg:w-[calc(25%-60px)] aspect-square lg:rounded-[20px] flex flex-col xl:gap-[25px] lg:gap-[20px] shadow-[0px_8px_16px_0px_#00000014,0px_0px_4px_0px_#0000000A] justify-center items-center group"
-                        >
+                        >   
                             <div className="lg:rounded-[25px] lg:w-[40%] aspect-square bg-[#131122] flex items-center justify-center relative overflow-hidden  ">
                                 <Image
                                     fill
