@@ -35,9 +35,9 @@ function Connect() {
                 sx={{
                   height: "66px",
                   fontWeight: "500",
-                  fontSize: { xs: "16px", lg: "20px", xl: "22px" },
+                  fontSize: { xs: "16", lg: "20", xl: "22" },
                   "& input": {
-                    fontSize: { xs: "16px", lg: "20px", xl: "22px" },
+                    fontSize: { xs: "16", lg: "20", xl: "22" },
                   },
                   "&:before": {
                     borderBottom: "1px solid #ccc",
@@ -106,10 +106,10 @@ function Connect() {
 
             <button
               type="submit"
-              className="flex justify-center items-center lg:rounded-[12px] font-semibold xl:text-[20px] lg:text-[18px] xl:w-[220px]  lg:w-[190px] bg-gradient-to-b from-[#C18830] to-[#976220] xl:px-[40px] xl:py-[20px] lg:px-[30px] lg:py-[15px] text-white border-2 border-transparent  cursor-pointer"
+              className="flex justify-center items-center lg:rounded-[12px] font-semibold xl:text-[20px] lg:text-[18px] xl:w-[220px]  lg:w-[190px] xl:px-[40px] xl:py-[20px] lg:px-[30px] lg:py-[15px] text-white border-2 border-transparent  cursor-pointer"
               style={{
                 backgroundImage:
-                  "linear-gradient(#C18830, #976220), linear-gradient(90deg, #C18830, #E5D1B7)",
+                  "linear-gradient( #326F46,#20973A), linear-gradient(180deg, #20973A, #326F46)",
                 backgroundOrigin: "border-box",
                 backgroundClip: "padding-box, border-box",
               }}

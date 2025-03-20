@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <>
       <div>
-        <Navbar />
         <Socialmedia/>
         <Banner/>
         <WhoAreWe/>
@@ -24,9 +23,6 @@ export default function Home() {
         <OurStack/>
         <Collaborations/>
         <Connect/>
-        <FooterTwo/>
-        <Footer/>
-        <div></div>
       </div>
     </>
   );
