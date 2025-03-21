@@ -81,7 +81,7 @@ function Footer() {
 
 
             </div>
-            <div className='flex justify-center items-center xl:text-[16px]w-full inter'>Copyright @ 2025 Supportta Solutions Private Limited. All rights reserved</div>
+            <div className='flex justify-start items-center xl:text-[16px]w-full inter'>Copyright @ 2025 Supportta Solutions Private Limited. All rights reserved</div>
         </div>
     </footer>
   )
