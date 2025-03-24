@@ -26,7 +26,7 @@ export default function Services() {
       <section className="mt-28">
         <ServicesScroll />
       </section>
-      <section>
+      <section className="mt-28">
         <Phases/>
       </section>
     </div>
