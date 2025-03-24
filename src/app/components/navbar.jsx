@@ -44,7 +44,7 @@ export default function Navbar() {
           <Image src="/Logo.png" alt="Company Logo" width={151} height={51} />
         </div>
 
-        <div className="hidden md:flex space-x-10 text-md font-[Inter]  uppercase">
+        <div className="hidden lg:flex space-x-10 text-md font-[Inter]  uppercase">
           <Link href="/services" className="hover:text-gray-300">
             Services
           </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button
             className="relative flex gap-1 items-center text-[#20973A] py-2 px-4 rounded-lg "
             style={{
@@ -89,7 +89,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
