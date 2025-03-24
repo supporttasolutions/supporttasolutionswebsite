@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Autoplay } from "swiper/modules";
 import ButtonPage from "./button";
-
-export default function ServicesScroll() {
+export default function ServicesSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const services = [
     {
       image: "/serv1.png",
@@ -43,35 +45,66 @@ export default function ServicesScroll() {
       imgSrc: "/servImage.png",
     },
   ];
-
   return (
     <div className="max-w-screen-xl mx-auto">
-      <div className="bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] items-center">
-        {/* Cards Section (Scrollable on Mobile) */}
-        <div className="overflow-x-auto snap-x snap-mandatory flex gap-4 px-6 lg:overflow-visible lg:justify-center">
+      <div className=" py-4 px-4 lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center ">
+        <Swiper
+          slidesPerView={1}
+          // spaceBetween={25}
+          loop={true}
+          // autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+          breakpoints={{
+            768: { slidesPerView: 4, spaceBetween: 20 },
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="w-full h-[250px] lg:h-[180px] px-2"
+        >
           {services.map((service, index) => (
-            <div
-              key={index}
-              className={`shadow-[0px 8px 16px 0px #00000014] 
-        flex flex-col justify-center items-center 
-        p-4 rounded-lg cursor-pointer transition-all duration-300 
-        w-[90%] snap-center lg:w-64 
-        ${activeIndex === index ? "bg-white" : "bg-[#DDDDDD]"}`}
-              onClick={() => setActiveIndex(index)}
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={100}
-                height={66}
-              />
-              <p className="text-center font-medium text-lg mt-2">
-                {service.title}
-              </p>
-            </div>
-          ))}
-        </div>
+            <SwiperSlide key={index}>
+              <div
+                className={`p-4 w-[100%] rounded-lg cursor-pointer transition-all duration-300 ${
+                  activeIndex === index
+                    ? "bg-white shadow-[10px_10px_10px_0px_#00000014]"
+                    : "bg-[#DDDDDD]"
+                } `}
+              >
+                <div
+                  className={`h-[100px]
+                flex flex-row-reverse lg:flex-col justify-between md:justify-center items-center
+               snap-center lg:w-full
+                `}
+                >
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={100}
+                    height={70}
+                  />
+                  <div className="flex flex-col text-start">
+                    <p className="text-start lg:text-center font-medium text-lg mt-2">
+                      {service.title}
+                    </p>
+                    <Image
+                      src="/figmaLinear.png"
+                      alt="figmaLimg"
+                      width={130}
+                      height={60}
+                      className="block lg:hidden"
+                    />
+                  </div>
+                </div>
 
+                <div className="flex justify-end mt-1">
+                  <ButtonPage
+                    btnName="Let's Connect"
+                    className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2 block md:hidden"
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
         {/* Content Section (Hidden on Mobile) */}
         <div className="hidden md:flex justify-center items-center w-full h-auto px-8 py-8">
           <div className="flex flex-col items-center text-center max-w-[1200px] w-full mx-auto lg:flex-row lg:text-left lg:items-start">
@@ -97,7 +130,6 @@ export default function ServicesScroll() {
                 />
               </div>
             </div>
-
             {/* Right: Image */}
             <div className="w-full lg:w-1/2 flex justify-end mt-6 lg:mt-0">
               <Image
