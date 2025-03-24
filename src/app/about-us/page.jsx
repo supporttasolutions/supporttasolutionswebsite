@@ -9,11 +9,13 @@ function page() {
      
         <>
             <BannerCommon button1={' Free Consultation'} button2={'our services'} description={'Specialists in web and digital marketing solutions. Brewed with love in Kottayam.'} title={'About Us'}/>
+            <div className=" flex flex-col gap-[180px]">
+
             <MissionVision/>
             <Overview/>
             <OverviewTwo/>
             <Connect/>
-
+</div>
             </>
   )
 }

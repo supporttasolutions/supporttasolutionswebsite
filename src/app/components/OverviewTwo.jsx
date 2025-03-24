@@ -11,8 +11,8 @@ function OverviewTwo() {
         description2:"A well-defined strategy that ensures an efficient and user-focused product."
     }]
   return (
-    <div className="bg-[#000000] flex items-center justify-center w-full">
-    <div className='w-[83%] flex flex-col xl:gap-[80px]  xl:py-[80px]'>
+    <div className=" bg-[#000000] flex items-center justify-center w-full sectionOuter">
+    <div className=' container flex flex-col xl:gap-[80px]  xl:py-[80px]'>
             {datas.flatMap((details, index) =>  Array(4).fill(details).map((details,i)=>(
                 <div key={`${index}-${i}`} className=" flex items-start justify-between w-full xl:py-[30px]">
                 <div className=" flex flex-col xl:gap-[35px] w-[54.1%]">

@@ -48,28 +48,28 @@ function Banner() {
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-[25%] flex items-center justify-center">
-                <Image
-                            src="/image-three.png"
-                            alt="image-one"
-                            width={280}
-                            height={280} // Fixed size
-                            className="lg:w-[250px] lg:h-[50%] xl:w-[300px] xl:h-[50%] 2xl:w-[320px] 2xl:h-[320px] object-contain  absolute lg:translate-y-36 xl: translate-y-48"
-                        />
-                        <Image
-                            src="/image-two.png"
-                            alt="image-two"
-                            width={280}
-                            height={280} // Fixed size
-                            className="lg:w-[250px] lg:h-[50%] xl:w-[300px] xl:h-[50%] 2xl:w-[320px] 2xl:h-[320px] object-contain  z-[1] absolute lg:-translate-x-40 xl:-translate-x-48"
-                        />
-                        <Image
-                            src="/image-one.png"
-                            alt="image-three"
-                            width={280}
-                            height={280} // Fixed size
-                            className="lg:w-[250px] lg:h-[50%] xl:w-[300px] xl:h-[50%] 2xl:w-[320px] 2xl:h-[320px] object-contain  absolute lg:-translate-y-36 xl:-translate-y-48"
-                        />
+                <div className="lg:w-[25%] lg:h-[75%] flex items-center justify-center">
+                    <Image
+                        src="/image-three.png"
+                        alt="image-one"
+                        width={280}
+                        height={280} // Fixed size
+                        className="lg:w-[40%] lg:h-[40%]  object-contain  absolute lg:translate-y-36 xl: translate-y-[70%]"
+                    />
+                    <Image
+                        src="/image-two.png"
+                        alt="image-two"
+                        width={280}
+                        height={280} // Fixed size
+                        className="lg:w-[40%] lg:h-[40%] object-contain  z-[1] absolute lg:-translate-x-40 xl:-translate-x-48"
+                    />
+                    <Image
+                        src="/image-one.png"
+                        alt="image-three"
+                        width={280}
+                        height={280} // Fixed size
+                        className="lg:w-[40%] lg:h-[40%] object-contain  absolute lg:-translate-y-36 xl:-translate-y-48"
+                    />
                 </div>
                 {/* <div className="h-fit lg:w-[400px] absolute right-0 flex flex-col items-end justify-between z-50">
                     <div className="absolute lg:w-[50%] xl:w-[70%] h-full flex flex-col items-end justify-center">

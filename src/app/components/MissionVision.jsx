@@ -17,9 +17,9 @@ function MissionVision() {
         },
     ];
     return (
-        <div className="flex items-center justify-center">
-            <div className="w-[83%] raleway flex-wrap flex">
-                <div className=" flex xl:gap-[60px] ">
+        <div className="flex items-center justify-center sectionOuter">
+            <div className=" raleway flex-wrap flex container">
+                <div className=" flex xl:gap-[60px] gap-[80px] ">
                     {ourMissionVision.map((details, index) => (
                         <div
                             key={index}
@@ -29,7 +29,7 @@ function MissionVision() {
                                 <Image width={66} height={66} src={`${details.image}`} alt="mission   " />
                                 <div className="font-bold xl:text-[40px]">{details.title}</div>
                             </div>
-                            <div className=" text-[#13112260] font-medium xl:text-[24px] capitalize text-center">
+                            <div className=" text-[#13112290] font-medium xl:text-[24px] capitalize text-center">
                                 {details.description}
                             </div>
                         </div>

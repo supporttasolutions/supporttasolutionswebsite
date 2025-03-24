@@ -2,6 +2,11 @@ import Footer from "./components/Footer";
 import FooterTwo from "./components/FooterTwo";
 import Navbar from "./components/navbar";
 import "./globals.css";
+import { Sora, Inter, Raleway } from "next/font/google";
+
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway" });
 
 export const metadata = {
   title: "Supportta Solutions",
