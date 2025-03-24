@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 function FooterTwo() {
   return (
-    <div className='w-full flex justify-center lg:pt-[5px] lg:pb-[10px] bg-[#B0B0B0] text-[#05070BB2] raleway xl:h-[83px] lg:h-[73px]'>
+    <div className='w-full flex justify-center lg:pt-[5px] lg:pb-[10px] bg-gradient-to-b from-[#fdf9f3] to-[#FFF3E1]  text-[#05070BB2] raleway xl:h-[83px] lg:h-[73px]'>
         <div className="container flex justify-center lg:w-[83%]">
 
         <div className=" flex justify-between items-end  w-full">
