@@ -4,12 +4,12 @@ import Image from "next/image";
 
 function Overview() {
     return (
-        <div className="flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center xl:gap-[80px] w-[83%]">
+        <div className="flex items-center justify-center sectionOuter ">
+            <div className="flex flex-col items-center justify-center xl:gap-[80px]  container">
                 <Heading heading={"Overview"} description={"Your Vision, Our Innovation – Building Success Together."} />
                 <div className=" relative flex items-center justify-center w-[86.75%] aspect-[1/.28]">
                     <div className="absolute z-10 bg-[#ffffff50] h-full w-full"></div>
-                    <Image src={"/hero-bg.jpg"} fill className="object-fill" alt=""/>
+                    <Image src={"/hero-bg.jpg"} fill className="object-fill" alt="" />
                 </div>
                 <div className="text-justify xl:text-[24px] raleway font-medium  tracking-[5%]">
                     Welcome to Supportta –{" "}

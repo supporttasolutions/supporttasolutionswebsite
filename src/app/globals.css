@@ -11,3 +11,97 @@
 .sora{
     font-family: "Sora", sans-serif;
 }
+
+
+
+.sectionOuter {
+    padding:0 15px;
+  }
+  .banner-main{
+    height: 492px;
+}
+.banner-title{
+    font-size: 56px;
+    font-weight: 400;
+    opacity: 0.9;
+    text-align: start;
+}
+.banner-description{
+    font-size: 24px;
+    text-align: start;
+    max-width: 309px;
+    width: 90%;
+}
+.banner-button-main{
+    flex-direction: column;
+    gap: 15px;
+}
+.banner-button-main button{
+    width:194px ;
+    border-radius: 8px;
+    padding: 12px 0 ;
+    font-size: 16px;
+}
+  
+  @media (min-width: 640px) {
+    .sectionOuter {
+      padding:0 32px;
+    }
+    .banner-main{
+        height: 596px;
+    }
+    .banner-title, .banner-description{
+        text-align: center;
+        width: auto;
+        max-width: fit-content;
+    }
+    .banner-button-main{
+        flex-direction: row;
+    }
+    .banner-button-main button{
+        width:194px ;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .sectionOuter {
+      padding:0 48px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .sectionOuter {
+      padding:0 80px;
+    }
+    .banner-title{
+        font-weight: 600;
+    }
+    .banner-button-main button{
+        width:220px ;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .sectionOuter {
+      padding:0 120px;
+    }
+    .banner-main{
+        height: 600px;
+    }
+    .banner-title{
+        font-size: 64px;
+    }
+    .banner-button-main button{
+        width:240px ;
+        border-radius: 12px;
+    }
+  }
+@media (min-width: 1536px) {
+    .sectionOuter {
+      padding:0 120px;
+    }
+  }
