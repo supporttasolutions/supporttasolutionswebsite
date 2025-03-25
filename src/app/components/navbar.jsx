@@ -50,13 +50,13 @@ export default function Navbar() {
           <Link href="/services" className="hover:text-gray-300">
             Services
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/careers" className="hover:text-gray-300">
             Careers
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/about-us" className="hover:text-gray-300">
             About Us
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/connect-us" className="hover:text-gray-300">
             Contact Us
           </Link>
         </div>

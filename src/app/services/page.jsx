@@ -5,8 +5,7 @@ import ServicesScroll from "../components/serviceScroll";
 export default function Services() {
   return (
     <div className="2xl:min-h-auto lg:min-h-screen w-full  lg:py-[80px] ">
-      <div className="absolute inset-0 bg-[#FFEBD5]/40 backdrop-blur-[400px] z-[-1] md:hidden">
-      </div>
+      <div className="absolute inset-0 bg-[#FFEBD5]/40 backdrop-blur-[400px] z-[-1] md:hidden"></div>
 
       <section className="relative z-[1] flex flex-col items-center  justify-center ">
         <BannerHead
