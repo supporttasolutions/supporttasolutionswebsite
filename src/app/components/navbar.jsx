@@ -40,21 +40,23 @@ export default function Navbar() {
       } fixed w-full top-0 left-0 z-50 transition-all duration-300`}
     >
       <div className="container mx-auto flex justify-between items-center py-2 px-6 md:px-12 lg:px-20">
+        <Link href='/'>
         <div>
           <Image src="/Logo.png" alt="Company Logo" width={151} height={51} />
         </div>
+        </Link>
 
         <div className="hidden lg:flex space-x-10 text-md font-[Inter]  uppercase">
           <Link href="/services" className="hover:text-gray-300">
             Services
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/careers" className="hover:text-gray-300">
             Careers
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/about-us" className="hover:text-gray-300">
             About Us
           </Link>
-          <Link href="#" className="hover:text-gray-300">
+          <Link href="/connect-us" className="hover:text-gray-300">
             Contact Us
           </Link>
         </div>

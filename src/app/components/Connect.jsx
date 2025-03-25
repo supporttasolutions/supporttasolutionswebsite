@@ -2,10 +2,14 @@ import { Input } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Heading from "./Heading";
+import ButtonPage from "./button";
 
 function Connect() {
   return (
-    <section id="white-section" className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] min-h-[150vh]">
+    <section
+      id="white-section"
+      className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] min-h-[150vh]"
+    >
       <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
         <Heading
           description={"Let's Build Something Amazing!"}
@@ -104,18 +108,12 @@ function Connect() {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="flex justify-center items-center lg:rounded-[12px] font-semibold xl:text-[20px] lg:text-[18px] xl:w-[220px]  lg:w-[190px] xl:px-[40px] xl:py-[20px] lg:px-[30px] lg:py-[15px] text-white border-2 border-transparent  cursor-pointer"
-              style={{
-                backgroundImage:
-                  "linear-gradient( #326F46,#20973A), linear-gradient(180deg, #20973A, #326F46)",
-                backgroundOrigin: "border-box",
-                backgroundClip: "padding-box, border-box",
-              }}
-            >
-              Let’s Connect
-            </button>
+            <ButtonPage
+              btnName={"Let's Connect"}
+              className={
+                "bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
+              }
+            />
           </form>
         </div>
       </div>

@@ -2,14 +2,14 @@ import ButtonPage from "../components/button";
 
 export default function BannerHead({ head, desc, buttons, longDesc }) {
   return (
-    <div className="inter px-4">
+    <div className="inter px-4 bg-white">
       <h1
         className=" text-[52px] lg:text-[64px] mt-24 mb-4 lg:mb-0 font-[500] text-start lg:text-center leading-[1.2] lg:leading-normal break-words"
         style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         {head}
       </h1>
-      <p className="text-start lg:text-center font-[600] text-[24px] text-[#000000]">
+      <p className="text-start lg:text-center font-[600] text-[22px] text-[#000000]">
         {desc}
       </p>
 
@@ -24,9 +24,11 @@ export default function BannerHead({ head, desc, buttons, longDesc }) {
           ))}
         </div>
       ) : (
-        <p className="text-center lg:text-start mt-6 text-[18px] text-gray-700 px-6 lg:px-32">
-          {longDesc}
-        </p>
+        <div className="flex justify-center mt-12">
+          <p className="text-start lg:text-center  text-[18px] text-[rgba(19,17,34,0.6)]  w-[614px]">
+            {longDesc}
+          </p>{" "}
+        </div>
       )}
     </div>
   );

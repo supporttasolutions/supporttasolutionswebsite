@@ -35,17 +35,10 @@ export default function SolutionsPage() {
     },
   ];
   return (
-    <section id="white-section" className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] min-h-[150vh] ">
-      {/* <div className="text-lg md:text-xl flex justify-center items-center gap-2 text-[#E08F34] font-semibold">
-        <hr className="bg-[#1FD372] w-[12px] h-[3px] rounded-full" />
-        SOLUTIONS WE OFFER
-        <hr className="bg-[#1FD372] w-[12px] h-[3px] rounded-full" />
-      </div>
-
-      <h2 className="text-2xl md:text-4xl font-regular mt-3 text-center mx-auto w-full break-words">
-        Explore our cutting-edge <br /> business solutions
-      </h2> */}
-
+    <section
+      id="white-section"
+      className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] min-h-[150vh] "
+    >
       <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container ">
         <Heading
           heading="solutions we offer"
