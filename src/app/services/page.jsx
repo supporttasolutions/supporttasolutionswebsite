@@ -20,7 +20,7 @@ export default function Services() {
             {
               text: "Let’s Build Together",
               className:
-                "text-linear-to-t from-[#20973A] to-[#326F46] font-[600]",
+                "text-linear-to-t from-[#20973A] to-[#326F46] font-[600] text-[#2F7644]",
             },
           ]}
         />

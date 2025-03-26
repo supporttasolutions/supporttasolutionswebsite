@@ -1,12 +1,12 @@
 import React from "react";
 
 function Buttons({ title, textColor, bgColor }) {
-  console.log(textColor);
+  console.log(bgColor);
 
   return (
     <button
       type="submit"
-      className={`flex  justify-center items-center lg:rounded-[12px] font-semibold xl:text-[20px] lg:text-[18px] lg:px-[30px] lg:py-[15px]  border-2 border-transparent  cursor-pointer`}
+      className={`flex  justify-center items-center lg:rounded-[6px] font-regular xl:text-[20px] lg:text-[18px] lg:px-[30px] lg:py-[15px]  border-2 border-transparent  cursor-pointer`}
       style={{
         backgroundImage: bgColor
           ? bgColor
@@ -14,6 +14,7 @@ function Buttons({ title, textColor, bgColor }) {
         backgroundOrigin: "border-box",
         backgroundClip: "padding-box, border-box",
         color: `#${textColor}`,
+        width:"250px"
       }}
     >
       {title}

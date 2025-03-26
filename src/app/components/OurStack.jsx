@@ -17,7 +17,10 @@ function OurStack() {
     { src: "/nodejs.png", label: "Node Js" },
   ];
   return (
-    <section id="white-section"  className="2xl:min-h-auto lg:min-h-screen  w-full inter flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] min-h-[150vh]">
+    <section
+      id="white-section"
+      className="2xl:min-h-auto lg:min-h-screen  w-full inter flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] min-h-[150vh]"
+    >
       <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container lg:px-[30px] xl:px-[40px]">
         <Heading
           description={"The Technologies behind our Innovation"}
@@ -38,7 +41,7 @@ function OurStack() {
                 />
               </div>
 
-              <div className="sora text-[#00000040] font-semibold xl:text-[20px] lg:text-[18px]">
+              <div className="font-[sora] text-[#00000040] font-semibold xl:text-[20px] lg:text-[18px]">
                 {stack.label}
               </div>
             </div>

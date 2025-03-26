@@ -9,42 +9,42 @@ const phases = [
   {
     title: "Discovery Phase - Laying the Foundation",
     description:
-      "Every great solution starts with understanding. We begin with in-depth research and strategy building, ensuring a strong foundation for your project.",
+      "Every great solution starts with understanding. We begin with in-depth research and strategy building, ensuring a strong foundation for your project. Our team crafts lean go-to-market strategies to enhance user experience, align with your objectives, and guarantee a successful launch. By gathering core product insights, we translate your vision into clear, actionable app requirements.",
     sub: "A well-defined strategy that ensures an efficient and user-focused product.",
     image: "/servScroll_Img.png",
   },
   {
     title: "Planning Phase - Structuring Success",
     description:
-      "The planning phase is where we map out the key features, technical requirements, and overall framework of your project.",
+      "The planning phase is where we map out the key features, technical requirements, and overall framework of your project. Our approach covers:*Performance benchmarks & usability *Security & data protection *Failure prevention & recovery strategies *Scalability & accessibility *With a detailed roadmap in place, we minimize risks, streamline workflows, and maximize productivity.",
     sub: "A structured development process that accelerates project success.",
     image: "/servScroll_Img.png",
   },
   {
     title: "Design Phase - Crafting Intuitive Experiences",
     description:
-      "In this phase, we bring your vision to life through visually compelling, user-friendly, and functional designs.",
+      "In this phase, we bring your vision to life through visually compelling, user-friendly, and functional designs. We focus on: *User interface (UI) and experience (UX) design *Wireframing & prototyping *Seamless interaction design *Our goal is to create a visually stunning, intuitive, and accessible product that reflects your brand and resonates with your audience.",
     sub: "A prototype-driven, user-friendly design ready for development.",
     image: "/servScroll_Img.png",
   },
   {
     title: "Development Phase - Building the Solution",
     description:
-      "With a strong strategy and design in place, our expert developers begin coding your application.",
+      "With a strong strategy and design in place, our expert developers begin coding your application. Depending on your business needs and complexity, we: * Build applications using low-code/no-code or custom development. *Optimize for performance, security, and scalability. *Continuously test and iterate for a bug-free experience. *Our team ensures seamless integration with third-party services, databases, and cloud platforms, making your app future-ready.",
     sub: "A functional, high-performance digital solution.",
     image: "/servScroll_Img.png",
   },
   {
     title: "Quality Assurance & Testing – Ensuring Perfection",
     description:
-      "Before launch, our dedicated QA team rigorously tests the application across multiple parameters.",
+      "Before launch, our dedicated QA team rigorously tests the application across multiple parameters, including: *Performance & security testing *Integration & compatibility checks *Bug detection & resolution *We deliver a fully optimized, reliable, and market-ready product only after resolving all identified issues.",
     sub: "A flawless, high-performing solution ready for deployment.",
     image: "/servScroll_Img.png",
   },
   {
     title: "Deployment & Maintenance – Continuous Growth",
     description:
-      "Once your app or website is launched, we ensure smooth deployment with manual or automated processes based on your business needs.",
+      "Once your app or website is launched, we ensure smooth deployment with manual or automated processes based on your business needs. Post-launch, we provide: *Regular updates & performance monitoring *User feedback-driven improvements *Security patches & scalability enhancements *Your success doesn’t stop at launch—we help your solution evolve to stay relevant, competitive, and efficient in a fast-changing digital landscape.",
     sub: "A well-maintained, adaptable product that meets market demands.",
     image: "/servScroll_Img.png",
   },
@@ -61,7 +61,7 @@ export default function Phases() {
   }, [refs]);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4">
+    <div className="container mx-auto w-full py-[80px] px-[120px] md:px-12 lg:px-20 ">
       <div className="flex justify-center">
         <Heading heading="Phases" description="How do we work as a team!" />
       </div>
@@ -108,13 +108,13 @@ export default function Phases() {
                 } items-start`}
               >
                 <div className="flex flex-col lg:w-[80%] items-start ">
-                  <h3 className="text-[26px] font-[600] text-[#131122E5]">
+                  <h3 className="text-[26px] font-semibold font-[raleway] text-[#131122E5]">
                     {phase.title}
                   </h3>
-                  <p className="mt-2 text-[#13112299] text-[18px] font-[400] text-justify">
+                  <p className="mt-3 text-[#13112299] text-[18px]  font-[inter] font-regular text-justify">
                     {phase.description}
                   </p>
-                  <p className="mt-2 text-[#131122E5] text-[20px] font-[500] text-justify">
+                  <p className="mt-3 text-[#131122E5] text-[20px] font-[raleway] font-medium text-justify">
                     {phase.sub}
                   </p>
                 </div>

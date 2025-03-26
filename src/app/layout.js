@@ -1,7 +1,13 @@
+import { Inter, Raleway, Sora } from "next/font/google";
 import Footer from "./components/Footer";
 import FooterTwo from "./components/FooterTwo";
 import Navbar from "./components/navbar";
 import "./globals.css";
+
+// Load fonts and set CSS variables
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
 export const metadata = {
   title: "Supportta Solutions",
@@ -11,9 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />  
-        {children}  
+      <body className={`${inter.variable} ${raleway.variable} ${sora.variable}`}>
+        <Navbar />
+        {children}
         <FooterTwo />
         <Footer />
       </body>

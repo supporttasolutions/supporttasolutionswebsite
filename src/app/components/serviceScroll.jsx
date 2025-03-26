@@ -46,13 +46,13 @@ export default function ServicesSlider() {
     },
   ];
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className=" container  py-[80px] px-[120px] md:px-12 lg:px-20  mx-auto">
       <div className=" py-4 px-4 lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center ">
         <Swiper
           slidesPerView={1}
           // spaceBetween={25}
           loop={true}
-          // autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Autoplay]}
           breakpoints={{
             768: { slidesPerView: 4, spaceBetween: 20 },
@@ -81,8 +81,8 @@ export default function ServicesSlider() {
                     width={100}
                     height={70}
                   />
-                  <div className="flex flex-col text-start">
-                    <p className="text-start lg:text-center font-medium text-lg mt-2">
+                  <div className="flex flex-col text-start font-[raleway]">
+                    <p className="text-start lg:text-center font-medium text-[16px] mt-2">
                       {service.title}
                     </p>
                     <Image
@@ -117,10 +117,10 @@ export default function ServicesSlider() {
                 height={50}
                 className="mx-auto lg:mx-0"
               />
-              <h2 className="text-[#131122E5] font-lg text-[26px] mt-4">
+              <h2 className="text-[#131122E5] font-[raleway] font-medium text-[26px] mt-4">
                 {services[activeIndex].title}
               </h2>
-              <p className="text-[#13112299] font-[400] text-[20px] mt-4">
+              <p className="text-[#13112299]  font-[inter] font-regular text-[20px] mt-4">
                 {services[activeIndex].description}
               </p>
               <div className="mt-6">

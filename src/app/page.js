@@ -7,20 +7,24 @@ import Solutions from "./components/business_solutions";
 import Collaborations from "./components/collaborations";
 import WhyChoose from "./components/whyChoose";
 
-
 export default function Home() {
   return (
     <>
       <div>
-        <Socialmedia/>
-        <Banner/>
-        <WhoAreWe/>
-        <Solutions/>
-        <WhyChoose/>
-        <OurStack/>
-        <Collaborations/>
-        <Connect/>
-    
+        <Socialmedia />
+        <Banner />
+        <section className="relative">
+          <div className="absolute bottom-0 left-0 w-full h-[150px]  bg-gradient-to-b from-transparent to-white"></div>
+        </section>
+       
+
+        <WhoAreWe />
+
+        <Solutions />
+        <WhyChoose />
+        <OurStack />
+        <Collaborations />
+        <Connect />
       </div>
     </>
   );

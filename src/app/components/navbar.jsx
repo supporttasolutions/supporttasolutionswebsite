@@ -39,14 +39,14 @@ export default function Navbar() {
           : "bg-white text-black shadow-md"
       } fixed w-full top-0 left-0 z-50 transition-all duration-300`}
     >
-      <div className="container mx-auto flex justify-between items-center py-2 px-6 md:px-12 lg:px-20">
+      <div className="container mx-auto flex justify-between items-center py-2 px-[120px] md:px-12 lg:px-20">
         <Link href='/'>
         <div>
           <Image src="/Logo.png" alt="Company Logo" width={151} height={51} />
         </div>
         </Link>
 
-        <div className="hidden lg:flex space-x-10 text-md font-[Inter]  uppercase">
+        <div className="hidden lg:flex space-x-10 text-md font-[inter]  uppercase">
           <Link href="/services" className="hover:text-gray-300">
             Services
           </Link>
@@ -107,16 +107,17 @@ export default function Navbar() {
           <Link href="/services" className="block py-2">
             Services
           </Link>
-          <Link href="#" className="block py-2">
+          <Link href="/careers" className="block py-2">
             Careers
           </Link>
-          <Link href="#" className="block py-2">
+          <Link href="/about-us" className="block py-2">
             About Us
           </Link>
-          <Link href="#" className="block py-2">
+          <Link href="/connect-us" className="block py-2">
             Contact Us
           </Link>
-          <button className="border-2 border-[#B77624] py-2 px-4 rounded-md w-full">
+        
+          <button className="border-2 border-[#B77624] py-2 px-4 rounded-md w-full font-semibold font-[inter]">
             8973476298
           </button>
         </div>
