@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Heading from "./Heading";
 import ButtonPage from "./button";
+import ContactForm from "./contactForm";
 
 function Connect() {
   return (
@@ -10,17 +11,17 @@ function Connect() {
       id="white-section"
       className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] min-h-[150vh]"
     >
-      <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
+      <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
         <Heading
           description={"Let's Build Something Amazing!"}
           heading={"Connect with us"}
         />
-        <div className="xl:gap-[120px] flex justify-center xl:px-[60px] w-full">
-          <div className="flex flex-col items-center lg:gap-[20px] w-[31%]">
-            <div className="raleway xl:text-[32px] font-medium">
+        <div className="flex justify-center xl:px-[60px] w-full">
+          <div className="flex flex-col items-center lg:gap-[20px] w-1/2">
+            <div className="font-[raleway] xl:text-[32px] font-medium text-[#2b2938]">
               Give Your Ideas Life!
             </div>
-            <div className="relative w-[60%] aspect-square ">
+            <div className="relative w-[50%] aspect-square ">
               <Image
                 src={"/amico.png"}
                 alt="connect"
@@ -28,10 +29,15 @@ function Connect() {
                 className=" object-contain"
               />
             </div>
-            <div className="raleway xl:text-[22px] font-medium text-[#13112299]">
+            <div className="font-[raleway] xl:text-[22px] font-medium text-[#13112299]">
               Share a Few Quick Details.
             </div>
           </div>
+
+          <div className="w-1/2">
+            <ContactForm />
+          </div>
+{/*           
           <form className="w-1/2 flex flex-col xl:gap-[30px] lg:gap-[25px] raleway">
             <div className="flex flex-col xl:gap-[30px] lg:gap-[25px]">
               <Input
@@ -114,7 +120,7 @@ function Connect() {
                 "bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
               }
             />
-          </form>
+          </form> */}
         </div>
       </div>
     </section>

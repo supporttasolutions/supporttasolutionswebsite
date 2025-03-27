@@ -1,17 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
-    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-      extend: {
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
-          raleway: ["Raleway", "sans-serif"],
-          sora: ["Sora", "sans-serif"],
-        },
-        
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: "var(--font-inter)",
+        raleway: "var(--font-raleway)",
+        sora: "var(--font-sora)",
       },
     },
-    plugins: [],
-  };
-  
+  },
+  plugins: [],
+};

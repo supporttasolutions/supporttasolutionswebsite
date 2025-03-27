@@ -1,8 +1,12 @@
 import Heading from "./Heading";
-import { Mail, Phone, MapPin } from "lucide-react";
 import { TextField } from "@mui/material";
 import { useState } from "react";
-import ButtonPage from "./button"
+import ButtonPage from "./button";
+import { IoMdMail } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
+import { MdLocationPin } from "react-icons/md";
+import Image from "next/image";
+import ContactForm from "./contactForm";
 
 export default function ConnectProjectPage() {
   const [formData, setFormData] = useState({
@@ -25,46 +29,55 @@ export default function ConnectProjectPage() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="py-12">
       <Heading
         heading="Tell Us About Your Project"
         description="Give Your Ideas Life!"
       />
 
-      <div className="flex flex-col lg:flex-row gap-10 items-start">
+      <div className="flex flex-col lg:flex-row gap-8 items-center w-full  py-[80px] px-[120px] md:px-12 lg:px-20 mx-auto container">
         {/* Contact Details Section */}
-        <div className="bg-[#FFF3E1] p-6 rounded-lg shadow-md w-full lg:w-1/3">
-          <div className="flex items-center gap-4 mb-4">
-            <Mail className="text-[#FF8C00]" />
-            <div>
-              <h5 className="font-semibold text-sm text-gray-700">Email</h5>
-              <h4 className="text-gray-800 text-base">qwer2qwertyui</h4>
+        <div className="bg-[#FFF3E1] p-6 md:p-10  w-full md:w-1/3 h-150 rounded-l-lg ">
+          <div className="space-y-8">
+            <div className="flex items-start space-x-2">
+              <IoMdMail className="text-[#E08F34] " size={25} />
+              <div className="font-[raleway]">
+                <p className="font-semibold text-md text-[#E08F34]">Email</p>
+                <p className="text-gray-500 text-base uppercase">
+                  qwer2qwertyui
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4 mb-4">
-            <Phone className="text-[#FF8C00]" />
-            <div>
-              <h5 className="font-semibold text-sm text-gray-700">Phone</h5>
-              <h4 className="text-gray-800 text-base">qwer2qwertyui</h4>
+            <div className="flex items-start space-x-2">
+              <FaPhone className="text-[#E08F34] " size={25} />
+              <div className="font-[raleway]">
+                <p className="font-semibold text-md text-[#E08F34]">Phone</p>
+                <p className="text-gray-500 text-base uppercase">
+                  qwer2qwertyui
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <MapPin className="text-[#FF8C00]" />
-            <div>
-              <h5 className="font-semibold text-sm text-gray-700">
-                Our Office Location
-              </h5>
-              <h4 className="text-gray-800 text-base">qwer2qwertyui</h4>
+            <div className="flex items-start space-x-2">
+              <MdLocationPin className="text-[#E08F34] " size={25} />
+              <div className="font-[raleway]">
+                <p className="font-semibold text-md text-[#E08F34]">
+                  Our Office Location
+                </p>
+                <p className="text-gray-500 text-base uppercase">
+                  qwer2qwertyui
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Form Section */}
-        <form
-          className="w-full lg:w-2/3 bg-white shadow-md rounded-lg p-6"
-          onSubmit={handleSubmit}
+
+        <div
+          className="w-full flex flex-col md:w-2/3 h-full"
         >
-          <div className="grid gap-6">
+          <ContactForm />
+          {/* <form className="space-y-4">
             <TextField
               label="Full Name"
               name="fullName"
@@ -74,14 +87,28 @@ export default function ConnectProjectPage() {
               onChange={handleChange}
               sx={{
                 "& .MuiInputLabel-root": {
-                    color: "rgba(0, 0, 0, 0.30)"
+                  color: "rgba(0, 0, 0, 0.30)",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A", // Floating label color on focus
+                  color: "#20973A",
                 },
-             
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "#E0E3E7", // Default border color
+                  borderBottomWidth: "2px",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "#B2BAC2 !important", // Hover state
+                },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A", // Bottom border color on focus
+                  borderBottomColor: "#20973A !important", // Focused state
+                },
+                "& .MuiInputBase-root": {
+                  height: "40px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                },
+                "& .MuiInputBase-input": {
+                  fontSize: "16px",
                 },
               }}
             />
@@ -96,13 +123,28 @@ export default function ConnectProjectPage() {
               onChange={handleChange}
               sx={{
                 "& .MuiInputLabel-root": {
-                    color: "rgba(0, 0, 0, 0.30)"
+                  color: "rgba(0, 0, 0, 0.30)",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A", // Floating label color on focus
+                  color: "#20973A",
+                },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "#E0E3E7", // Default border color
+                  borderBottomWidth: "2px",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "#B2BAC2 !important", // Hover state
                 },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A", // Bottom border color on focus
+                  borderBottomColor: "#20973A !important", // Focused state
+                },
+                "& .MuiInputBase-root": {
+                  height: "40px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                },
+                "& .MuiInputBase-input": {
+                  fontSize: "16px",
                 },
               }}
             />
@@ -116,13 +158,28 @@ export default function ConnectProjectPage() {
               onChange={handleChange}
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30);", // Default label color
+                  color: "rgba(0, 0, 0, 0.30)",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A", // Floating label color on focus
+                  color: "#20973A",
+                },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "#E0E3E7", // Default border color
+                  borderBottomWidth: "2px",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "#B2BAC2 !important", // Hover state
                 },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "rgba(185, 22, 22, 0.3)", // Bottom border color on focus
+                  borderBottomColor: "#20973A !important", // Focused state
+                },
+                "& .MuiInputBase-root": {
+                  height: "40px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                },
+                "& .MuiInputBase-input": {
+                  fontSize: "16px",
                 },
               }}
             />
@@ -135,13 +192,28 @@ export default function ConnectProjectPage() {
               onChange={handleChange}
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)"
+                  color: "rgba(0, 0, 0, 0.30)",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A", // Floating label color on focus
+                  color: "#20973A",
+                },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "#E0E3E7", // Default border color
+                  borderBottomWidth: "2px",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "#B2BAC2 !important", // Hover state
                 },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A", // Bottom border color on focus
+                  borderBottomColor: "#20973A !important", // Focused state
+                },
+                "& .MuiInputBase-root": {
+                  height: "40px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                },
+                "& .MuiInputBase-input": {
+                  fontSize: "16px",
                 },
               }}
             />
@@ -156,30 +228,51 @@ export default function ConnectProjectPage() {
               onChange={handleChange}
               sx={{
                 "& .MuiInputLabel-root": {
-                    color: "rgba(0, 0, 0, 0.30)"
+                  color: "rgba(0, 0, 0, 0.30)",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A", // Floating label color on focus
+                  color: "#20973A",
+                },
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "#E0E3E7", // Default border color
+                  borderBottomWidth: "2px",
+                },
+                "& .MuiInput-underline:hover:before": {
+                  borderBottomColor: "#B2BAC2 !important", // Hover state
                 },
                 "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A", // Bottom border color on focus
+                  borderBottomColor: "#20973A !important", // Focused state
+                },
+                "& .MuiInputBase-root": {
+                  height: "100px",
+                  // marginTop: "20px",
+                  // marginBottom: "20px",
+                },
+                "& .MuiInputBase-input": {
+                  fontSize: "16px",
                 },
               }}
             />
-          </div>
-          <div className="flex justify-end mt-1">
+          </form>
+          <div className="flex justify-start mt-8">
             <ButtonPage
               btnName="Let's Connect"
-              className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2 block md:hidden"
+              className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2 "
             />
-          </div>{" "}
-          <button
-            type="submit"
-            className="mt-6 w-full bg-[#20973A] text-white py-3 rounded-lg font-semibold hover:bg-[#326F46] transition duration-300"
-          >
-            Let's Connect
-          </button>
-        </form>
+          </div>{" "} */}
+        </div>
+      </div>
+
+      {/* image section */}
+      <div className="flex flex-col justify-center items-center ">
+        <p className="font-[medium] font-[raleway] text-[26px]">
+          Our team will get back to you as soon as possible.
+        </p>
+        <div className=" relative flex items-center justify-center w-[86.75%] aspect-[1/.28] mt-12  mx-auto container ">
+          <div className="absolute z-10 bg-[#ffffff50] h-full w-full"></div>
+          {/* <Image src={"/hero-bg.jpg"} fill className="object-fill" alt="" /> */}
+          <Image src={"/hero-bg.jpg"} fill className="object-fill" alt="" />
+        </div>
       </div>
     </div>
   );

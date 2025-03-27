@@ -57,6 +57,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(() => ({
 const StyledTypography = styled(Typography)({
   fontSize: "34px",
   fontWeight: "regular",
+  fontFamily: "var(--font-raleway)",
 });
 
 
@@ -68,7 +69,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div>
+    <div className=''>
       {[
         "Customer-First Solutions",
         "Agility Strategy Development",
@@ -78,7 +79,7 @@ export default function CustomizedAccordions() {
         <div key={index}>
           <Accordion expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
             <AccordionSummary>
-              <StyledTypography component="span">{title}</StyledTypography>
+              <StyledTypography component="span" >{title}</StyledTypography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

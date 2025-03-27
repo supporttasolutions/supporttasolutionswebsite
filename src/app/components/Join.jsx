@@ -1,7 +1,9 @@
-import React from "react";
+"use client"
+import React,{useState} from "react";
 import Heading from "./Heading";
 import Image from "next/image";
 import ButtonPage from "./button";
+import ContactDialog from "./contactModal";
 
 function Join() {
   const careers = [
@@ -30,14 +32,19 @@ function Join() {
       image: "/custom2.png",
     },
   ];
+  const [open, setOpen] = useState(false); // Modal state
+
+  const onApplyClick=()=>{
+    setOpen(true);
+  }
   return (
-    <div className="w-full px-[120px] py-[80px]">
+    <div className="container mx-auto w-full py-[80px] px-[120px] md:px-12 lg:px-20 ">
       <Heading
         heading={"Join"}
         description={"Be a part of our team,"}
         className="text-center"
       />
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-6 mt-8">
+      <div className="max-w-[100%]  flex flex-col gap-6 mt-8">
         {careers.map((career, index) => (
           <div
             key={index}
@@ -54,20 +61,25 @@ function Join() {
                 />
               </div>
               <div className="mt-3">
-                <h2 className="text-2xl font-bold text-[rgba(19, 17, 34, 0.90))] mb-2 ">{career.title}</h2>
-                <p className="text-lg font-semibold text-[rgba(19, 17, 34, 0.60))] mb-2">
+                <h2 className="text-2xl font-[raleway] font-semibold text-[rgba(19, 17, 34, 0.90)] mb-2 ">{career.title}</h2>
+                <p className="text-lg font-[raleway] font-semibold text-[#71707A] mb-2">
                   {career.category} | {career.type}
                 </p>
-                <p className="text-[rgba(19, 17, 34, 0.90))] text-lg">{career.description}</p>
+                <p className=" font-[raleway] font-medium text-[rgba(19, 17, 34, 0.90))] text-lg">{career.description}</p>
               </div>
             </div>
             <ButtonPage
               btnName={"Apply Now"}
               className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
+              onHandleClick={onApplyClick}
             />
           </div>
         ))}
       </div>
+
+
+      <ContactDialog open={open} setOpen={setOpen} />
+
     </div>
 
     // <div className="flex flex-col  items-center gap-[80px]">

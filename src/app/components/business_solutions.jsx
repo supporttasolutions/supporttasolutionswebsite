@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                   />
                 </div>
 
-                <div className="text-center sm:text-start">
+                <div className="text-center sm:text-start font-[raleway]">
                   <h4 className="font-semibold text-[20px] text-[#131122E5] mt-3">
                     {card.head}
                   </h4>

@@ -1,9 +1,10 @@
-export default function ButtonPage({ btnName, className }) {
+export default function ButtonPage({ btnName, className ,onHandleClick}) {
   return (
     <div className="">
       <button
+      onClick={onHandleClick}
       type="submit"
-        className={`relative text-[#20973A] w-[200px] px-4 py-3  inter ${className}`}
+        className={`relative text-[#20973A] w-[200px] px-4 py-3  font-[inter] ${className}`}
         style={{
           borderRadius: "10px",
         }}

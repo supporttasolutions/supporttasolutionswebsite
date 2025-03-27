@@ -18,7 +18,7 @@ export default function CollaborationsPage() {
 
   return (
     <section id="white-section" className="2xl:min-h-auto lg:min-h-screen w-full inter lg:py-[80px] bg-white min-h-[150vh] ">
-      <h2 className="text-2xl md:text-4xl font-light mt-3 px-[120px] text-center mx-auto w-full text-[#E08F34E5] break-words capitalize">
+      <h2 className="text-2xl md:text-4xl font-medium mt-3 px-[120px] font-[raleway] text-center mx-auto w-full text-[#E08F34E5] break-words capitalize">
         We are privileged to collaborate with the best, delivering <br />{" "}
         excellence every step of the way.
       </h2>
@@ -37,7 +37,7 @@ export default function CollaborationsPage() {
                 width={590}
                 height={250}
               />
-              <p className="mt-4 text-lg font-semibold text-[#131122E5] capitalize">
+              <p className="mt-4 text-lg font-medium font-[raleway] text-[grey] capitalize">
                 {collaborator.title}
               </p>
             </div>

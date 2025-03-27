@@ -7,7 +7,7 @@ function FooterTwo() {
 
         <div className=" flex justify-between items-end  w-full">
         <Image src='/Logo.png' width={200} height={68} alt='logo'   className="h-auto lg:w-[180px] xl:w-[200px] max-w-full object-contain aspect-[3/1]"/>
-        <div className='w-3/4 font-medium xl:text-[16px] lg:text-[14px]'>
+        <div className='w-3/4 font-medium xl:text-[16px] lg:text-[14px] font-[raleway]'>
         Driven by innovation and fueled by passion, Supportta is committed to delivering digital solutions that make a difference. Let’s build the future together.
         </div>
         </div>
