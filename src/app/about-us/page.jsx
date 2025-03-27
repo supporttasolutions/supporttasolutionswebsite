@@ -1,5 +1,5 @@
 import BannerCommon from "../components/BannerCommon";
-import BannerHead from "../components/bannerHead";
+import BannerHead from "../components/BannerHead";
 import Connect from "../components/Connect";
 import MissionVision from "../components/MissionVision";
 import Overview from "../components/Overview";

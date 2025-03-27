@@ -1,12 +1,12 @@
 import Heading from "./Heading";
 import { TextField } from "@mui/material";
 import { useState } from "react";
-import ButtonPage from "./button";
+import ButtonPage from "./ButtonPage";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { MdLocationPin } from "react-icons/md";
 import Image from "next/image";
-import ContactForm from "./contactForm";
+import ContactForm from "./ContactForm";
 
 export default function ConnectProjectPage() {
   const [formData, setFormData] = useState({

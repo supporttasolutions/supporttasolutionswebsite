@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
-import ButtonPage from "./button";
+import ButtonPage from "./ButtonPage";
 export default function ServicesSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const services = [

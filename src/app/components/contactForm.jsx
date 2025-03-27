@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { TextField } from "@mui/material";
-import ButtonPage from "./button";
+import ButtonPage from "./ButtonPage";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

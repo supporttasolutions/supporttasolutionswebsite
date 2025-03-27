@@ -2,8 +2,8 @@ import { Input } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Heading from "./Heading";
-import ButtonPage from "./button";
-import ContactForm from "./contactForm";
+import ButtonPage from "./ButtonPage";
+import ContactForm from "./ContactForm";
 
 function Connect() {
   return (

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import bannerStyle from "./banner.module.css";
 import Buttons from "./Buttons";
 
 function Banner() {
