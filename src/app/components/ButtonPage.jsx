@@ -3,7 +3,7 @@ export default function ButtonPage({ btnName, className, onHandleClick }) {
     <button
       onClick={onHandleClick}
       type="submit"
-      className={`relative text-[#20973A] w-full md:w-[200px] px-3 py-2 md:px-4 md:py-3 
+      className={`relative text-[#20973A] w-[200px] lg:w-[250px] px-3 py-2 md:px-4 md:py-3 
         text-sm md:text-base font-[inter] rounded-lg md:rounded-[10px] ${className}`}
       style={{
         borderRadius: "10px",

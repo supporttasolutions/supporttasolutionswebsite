@@ -9,15 +9,15 @@ function Connect() {
   return (
     <section
       id="white-section"
-      className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] min-h-[150vh]"
+      className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px]"
     >
       <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
         <Heading
           description={"Let's Build Something Amazing!"}
           heading={"Connect with us"}
         />
-        <div className="flex justify-center xl:px-[60px] w-full">
-          <div className="flex flex-col items-center lg:gap-[20px] w-1/2">
+        <div className="flex flex-col lg:flex-row justify-center  lg:px-[60px] w-full">
+          <div className="flex flex-col items-center lg:gap-[20px] w-full lg:w-1/2">
             <div className="font-[raleway] xl:text-[32px] font-medium text-[#2b2938]">
               Give Your Ideas Life!
             </div>
@@ -34,10 +34,10 @@ function Connect() {
             </div>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <ContactForm />
           </div>
-{/*           
+          {/*           
           <form className="w-1/2 flex flex-col xl:gap-[30px] lg:gap-[25px] raleway">
             <div className="flex flex-col xl:gap-[30px] lg:gap-[25px]">
               <Input

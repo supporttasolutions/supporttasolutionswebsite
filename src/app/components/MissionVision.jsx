@@ -17,25 +17,25 @@ function MissionVision() {
     },
   ];
   return (
-    <div className=" container mx-auto w-full py-[80px] px-[120px] md:px-12 lg:px-20 flex items-center justify-center">
+    <div className=" container mx-auto w-full py-[40px] lg:py-[80px] px-4   md:px-12  lg:px-[120px]  flex items-center justify-center">
       <div className="w-[100%]  flex-wrap flex ">
-        <div className=" flex xl:gap-[60px] ">
+        <div className=" flex flex-col lg:flex-row gap-[40px] lg:gap-[60px] ">
           {ourMissionVision.map((details, index) => (
             <div
               key={index}
-              className="flex w-[calc(50%-30px)] flex-col xl:gap-[50px] font-[raleway]  p-[40px] bg-[#fdf9f3] rounded-[8px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.04),0px_8px_16px_0px_rgba(0,0,0,0.08)]"
+              className="flex w-[calc(50%-30px)] w-full flex-col gap-[15px] lg:gap-[50px] font-[raleway]  p-[20px] lg:p-[40px] bg-[#fdf9f3] rounded-[8px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.04),0px_8px_16px_0px_rgba(0,0,0,0.08)]"
             >
-              <div className="flex flex-col items-center justify-between ">
+              <div className="flex flex-col gap-4  lg:gap-2 items-center justify-between ">
                 <Image
                   width={66}
                   height={66}
                   src={`${details.image}`}
                   alt="mission   "
                 />
-                <div className="font-bold  xl:text-[40px]">{details.title}</div>
+                <div className="font-bold  lg:text-[40px]">{details.title}</div>
               </div>
-              <div className="  text-[#716e76] font-medium xl:text-[24px] capitalize text-center transform-capitalize">
-                {details.description}
+              <div className=" text-[#716e76] font-medium text-[14px] lg:text-[24px]  capitalize text-justify lg:text-center transform-capitalize">
+                <p>{details.description}</p>
               </div>
             </div>
           ))}

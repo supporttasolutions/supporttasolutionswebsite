@@ -19,7 +19,7 @@ function CareersPage() {
           ]}
         />
       </section>
-      <section className="mt-28 bg-[#fdf9f3]">
+      <section className="mt-12 md:mt-20 lg:mt-28 bg-[#fdf9f3]">
         <Join />
       </section>
     </div>
