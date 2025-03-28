@@ -1,8 +1,8 @@
-"use client"
-import React,{useState} from "react";
+"use client";
+import React, { useState } from "react";
 import Heading from "./Heading";
 import Image from "next/image";
-import ButtonPage from "./button";
+import ButtonPage from "./ButtonPage";
 import ContactDialog from "./contactModal";
 
 function Join() {
@@ -34,11 +34,11 @@ function Join() {
   ];
   const [open, setOpen] = useState(false); // Modal state
 
-  const onApplyClick=()=>{
+  const onApplyClick = () => {
     setOpen(true);
-  }
+  };
   return (
-    <div className="container mx-auto w-full py-[80px] px-[120px] md:px-12 lg:px-20 ">
+    <div className="container mx-auto w-full py-[80px] px-2 lg:px-20 ">
       <Heading
         heading={"Join"}
         description={"Be a part of our team,"}
@@ -48,10 +48,10 @@ function Join() {
         {careers.map((career, index) => (
           <div
             key={index}
-            className="p-6 bg-white shadow-lg rounded-lg flex justify-between items-center"
+            className="p-6 bg-white shadow-lg rounded-lg flex flex-col lg:flex-row justify-between items-center w-full"
           >
             <div className="flex flex-col items-start ">
-              <div className="flex justify-center bg-[#FDF9F5] w-20 h-20 rounded-full">
+              <div className="flex justify-center bg-[#FDF9F5] w-15 h-15 lg:w-20 lg:h-20 rounded-full">
                 <Image
                   src={career.image}
                   alt="CareerImg"
@@ -61,25 +61,29 @@ function Join() {
                 />
               </div>
               <div className="mt-3">
-                <h2 className="text-2xl font-[raleway] font-semibold text-[rgba(19, 17, 34, 0.90)] mb-2 ">{career.title}</h2>
-                <p className="text-lg font-[raleway] font-semibold text-[#71707A] mb-2">
+                <h2 className=" text-lg lg:text-2xl font-[raleway] font-semibold text-[rgba(19, 17, 34, 0.90)] mb-2 ">
+                  {career.title}
+                </h2>
+                <p className="text-[12px] lg:text-base font-[raleway] font-semibold text-[#71707A] mb-2">
                   {career.category} | {career.type}
                 </p>
-                <p className=" font-[raleway] font-medium text-[rgba(19, 17, 34, 0.90))] text-lg">{career.description}</p>
+                <p className="text-[12px] lg:text-base font-[raleway] font-medium text-[rgba(19, 17, 34, 0.90))] text-lg">
+                  {career.description}
+                </p>
               </div>
             </div>
-            <ButtonPage
-              btnName={"Apply Now"}
-              className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
-              onHandleClick={onApplyClick}
-            />
+            <div className="flex justify-end w-full lg:w-auto mt-5">
+              <ButtonPage
+                btnName={"Apply Now"}
+                className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
+                onHandleClick={onApplyClick}
+              />{" "}
+            </div>
           </div>
         ))}
       </div>
 
-
       <ContactDialog open={open} setOpen={setOpen} />
-
     </div>
 
     // <div className="flex flex-col  items-center gap-[80px]">

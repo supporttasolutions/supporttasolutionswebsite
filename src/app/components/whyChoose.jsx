@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomizedAccordions from "./accordian";
+import CustomizedAccordions from "./Accordian";
 import Heading from "./Heading";
 
 export default function WhyChoose() {

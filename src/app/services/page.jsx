@@ -1,7 +1,7 @@
 import Image from "next/image";
-import BannerHead from "../components/bannerHead";
-import Phases from "../components/phases";
-import ServicesScroll from "../components/serviceScroll";
+import BannerHead from "../components/BannerHead";
+import Phases from "../components/Phases";
+import ServicesScroll from "../components/ServiceScroll";
 export default function Services() {
   return (
     <div className="2xl:min-h-auto lg:min-h-screen w-full  lg:py-[80px] ">

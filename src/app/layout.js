@@ -1,7 +1,7 @@
 import { Inter, Raleway, Sora } from "next/font/google";
 import Footer from "./components/Footer";
 import FooterTwo from "./components/FooterTwo";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 // Load fonts and set CSS variables
@@ -17,7 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${raleway.variable} ${sora.variable}`}>
+      <body
+        className={`${inter.variable} ${raleway.variable} ${sora.variable}`}
+        cz-shortcut-listen="true"
+      >
         <Navbar />
         {children}
         <FooterTwo />

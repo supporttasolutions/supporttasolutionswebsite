@@ -3,9 +3,9 @@ import Connect from "./components/Connect";
 import OurStack from "./components/OurStack";
 import Socialmedia from "./components/Socialmedia";
 import WhoAreWe from "./components/WhoAreWe";
-import Solutions from "./components/business_solutions";
-import Collaborations from "./components/collaborations";
-import WhyChoose from "./components/whyChoose";
+import Solutions from "./components/Business_solutions";
+import Collaborations from "./components/Collaborations";
+import WhyChoose from "./components/WhyChoose";
 
 export default function Home() {
   return (

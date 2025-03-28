@@ -9,8 +9,8 @@ import {
   IconButton,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close"; // Close icon for modal
-import ContactForm from "./contactForm";
-import ButtonPage from "./button";
+import ContactForm from "./ContactForm";
+import ButtonPage from "./ButtonPage";
 
 export default function ContactDialog({ open, setOpen }) {
   const [formData, setFormData] = useState({
