@@ -9,7 +9,7 @@ function page() {
   return (
     <>
       <div className="2xl:min-h-auto lg:min-h-screen w-full  lg:py-[80px] ">
-        <section>
+        <section className="mt-28">
           <BannerHead
             buttons={[
               {
@@ -29,16 +29,16 @@ function page() {
             head={"About Us"}
           />
         </section>
-        <section className="mt-28">
+        <section className=" mt-16 lg:mt-28">
           <MissionVision />{" "}
         </section>
-        <section className="mt-28">
+        <section className="mt-28 hidden lg:block">
         <Overview />
         </section>
-        <section className="mt-28">
+        <section className="mt-16 lg:mt-28">
         <OverviewTwo />
         </section>
-        <section className="mt-28">
+        <section className="mt-16 lg:mt-28">
         <Connect />
         </section>
       </div>

@@ -9,28 +9,40 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc }
       >
         {head}
       </h1>
-      <p className="font-semibold text-[22px] text-[#000000] w-[300px] lg:w-[450px]">
+      <p className="font-semibold text-[22px] text-[#000000] w-[300px] lg:w-[450px] capitalize">
         {desc}
       </p>
 
-      {/* On mobile, show both button and longDesc; on large screens, show either button or longDesc */}
-      <div className="block lg:hidden">
-        {buttonsMob?.length > 0 && (
-          <div className="flex flex-col justify-start gap-4 mt-8 mb-12">
+      {/* 🟢 MOBILE: If buttonsMob exist, show them WITH longDesc in a column */}
+      {buttonsMob?.length > 0 ? (
+        <div className="block lg:hidden  mt-8 flex flex-col flex-col-reverse gap-8">
+          {longDesc && (
+            <p className="text-start font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[300px] capitalize">
+              {longDesc}
+            </p>
+          )}
+          <div className="flex flex-col justify-start gap-4">
             {buttonsMob.map((btn, index) => (
               <ButtonPage key={index} btnName={btn.text} className={btn.className} />
             ))}
           </div>
-        )}
-        {longDesc && (
-          <div className="flex justify-center mt-4">
-            <p className="text-start font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[300px] capitalize">
+        </div>
+      ) : (
+        // 🟡 MOBILE: If only `buttons` exist (same as large screens, but column layout)
+        <div className="block lg:hidden mt-8 flex flex-col justify-center items-center gap-4">
+          {buttons?.length > 0 ? (
+            buttons.map((btn, index) => (
+              <ButtonPage key={index} btnName={btn.text} className={btn.className} />
+            ))
+          ) : (
+            <p className="text-center font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[300px] capitalize ">
               {longDesc}
             </p>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
 
+      {/* 🖥️ LARGE SCREENS: Show buttons in a row, or longDesc if no buttons */}
       <div className="hidden lg:block">
         {buttons?.length > 0 ? (
           <div className="flex flex-row justify-center gap-12 mt-8">
