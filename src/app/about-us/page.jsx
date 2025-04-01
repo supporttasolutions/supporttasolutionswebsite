@@ -15,12 +15,12 @@ function page() {
               {
                 text: "Free Consultation",
                 className:
-                  "bg-linear-to-t from-[#20973A] to-[#326F46] text-white",
+                  "bg-linear-to-t from-[#20973A] to-[#326F46] text-white w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
               },
               {
                 text: "Our services",
                 className:
-                  "text-linear-to-t from-[#20973A] to-[#326F46] font-[600]",
+                  "text-linear-to-t from-[#20973A] to-[#326F46] font-[600] w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
               },
             ]}
             desc={

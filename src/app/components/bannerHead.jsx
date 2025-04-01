@@ -1,6 +1,8 @@
 import ButtonPage from "./ButtonPage";
+import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 
-export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc }) {
+
+export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,page }) {
   return (
     <div className="font-[inter] px-4 bg-white flex flex-col items-start lg:items-center">
       <h1
@@ -9,10 +11,16 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc }
       >
         {head}
       </h1>
-      <p className="font-semibold text-[22px] text-[#000000] w-[300px] lg:w-[450px] capitalize">
+      <p className="font-semibold text-start lg:text-center text-[22px] text-[#000000] w-[300px] lg:w-[450px] capitalize">
         {desc}
       </p>
-
+      {page === "connect" && (
+        <div className="flex justify-center gap-4 mt-8 lg:hidden">
+          <FaFacebook size={35} />
+          <FaLinkedin size={35} />
+          <FaInstagram size={35} />
+        </div>
+      )}
       {/* 🟢 MOBILE: If buttonsMob exist, show them WITH longDesc in a column */}
       {buttonsMob?.length > 0 ? (
         <div className="block lg:hidden  mt-8 flex flex-col flex-col-reverse gap-8">
@@ -35,7 +43,7 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc }
               <ButtonPage key={index} btnName={btn.text} className={btn.className} />
             ))
           ) : (
-            <p className="text-center font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[300px] capitalize ">
+            <p className="text-start lg:text-center w-full items-center font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] capitalize ">
               {longDesc}
             </p>
           )}
@@ -52,7 +60,7 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc }
           </div>
         ) : (
           <div className="flex justify-center mt-12">
-            <p className="text-center font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[614px] capitalize lg:normal-case">
+            <p className="text-center lg:text-center w-full lg:px-[120px] font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)]  capitalize lg:normal-case">
               {longDesc}
             </p>
           </div>

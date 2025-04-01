@@ -75,7 +75,7 @@ function Join() {
             <div className="flex justify-end w-full lg:w-auto mt-5">
               <ButtonPage
                 btnName={"Apply Now"}
-                className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
+                className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-3 py-3 md:px-4 md:py-3 cursor-pointer"
                 onHandleClick={onApplyClick}
               />{" "}
             </div>

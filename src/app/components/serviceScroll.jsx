@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import ButtonPage from "./ButtonPage";
+import Heading from "./Heading";
+
 export default function ServicesSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const services = [
@@ -46,8 +48,14 @@ export default function ServicesSlider() {
     },
   ];
   return (
-    <div className=" container  py-[80px] px-[120px] md:px-12 lg:px-20  mx-auto">
-      <div className=" py-4 px-4 lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center ">
+    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] px-3 lg:py-[80px] lg:px-[120px] mx-auto lg-white-bg">
+      {/* <div
+      className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w- h-[300px]  container py-[30px] lg:py-[80px] px-3 lg:px-[120px] mx-auto"
+    > */}
+      <div className="block lg:hidden ">
+        <Heading heading={"Services we scroll"} />
+      </div>
+      <div className=" py-4  lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center ">
         <Swiper
           slidesPerView={1}
           // spaceBetween={25}
@@ -58,7 +66,7 @@ export default function ServicesSlider() {
             768: { slidesPerView: 4, spaceBetween: 20 },
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="w-full h-[250px] lg:h-[180px] px-2"
+          className="w-full h-[180px] lg:h-[180px] px-2"
         >
           {services.map((service, index) => (
             <SwiperSlide key={index}>
@@ -125,7 +133,7 @@ export default function ServicesSlider() {
               </p>
               <div className="mt-6">
                 <ButtonPage
-                  className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white"
+                  className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-4 py-3 md:px-4 md:py-3 cursor-pointer"
                   btnName={"Let’s Connect"}
                 />
               </div>

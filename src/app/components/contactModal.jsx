@@ -51,9 +51,9 @@ export default function ContactDialog({ open, setOpen }) {
         onClose={handleClose}
         PaperProps={{
           sx: {
-            borderRadius: "20px", // Rounded corners like image 1
-            padding: "20px", // Add some padding inside
-            width: "100%", // Adjust width as needed
+            borderRadius: "20px", // Rounded corners
+            padding: { xs: "0px", lg: "20px" }, // 0 padding on mobile, 20px on large screens
+            width: "100%", // Full width
           },
         }}
       >
@@ -64,8 +64,8 @@ export default function ContactDialog({ open, setOpen }) {
             textAlign: "center",
             position: "relative",
             paddingBottom: "10px",
-            color:"#e08f34",
-            fontSize:"30px"
+            color: "#e08f34",
+            fontSize: "30px",
           }}
         >
           Contact Us{" "}
@@ -274,17 +274,21 @@ export default function ContactDialog({ open, setOpen }) {
                 },
               }}
             />
-            <div className="flex justify-center text-center px-16 mt-4">
+            <div className="flex justify-center text-center px-0 lg:px-16 mt-4">
               <p>
-                Or email <span className="text-[#e6a55d]"> info@supporttasolutions.com</span> to get in
-                touch with our team
+                Or email{" "}
+                <span className="text-[#e6a55d]">
+                  {" "}
+                  info@supporttasolutions.com
+                </span>{" "}
+                to get in touch with our team
               </p>
             </div>
-            <div className="flex justify-center mt-4">
-              <ButtonPage
-                btnName="Let's Connect"
-                className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2"
-              />
+            <div className="flex justify-center mt-4 ">
+              <button
+                type="submit"
+                className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white w-full lg:w-auto px-12 py-2 rounded-[8px]"
+              >Let's Connect</button>
             </div>
           </form>
         </DialogContent>

@@ -11,3 +11,10 @@
 .sora{
     font-family: "Sora", sans-serif;
 } */
+
+@media (min-width: 1024px) {
+    .lg-white-bg {
+      background: white !important;
+    }
+  }
+  

@@ -29,37 +29,39 @@ export default function ConnectProjectPage() {
   };
 
   return (
-    <div className="py-12">
+    <div className="py-8 lg:py-12">
       <Heading
         heading="Tell Us About Your Project"
         description="Give Your Ideas Life!"
       />
 
-      <div className="flex flex-col lg:flex-row gap-8 items-center w-full  py-[80px] px-[120px] md:px-12 lg:px-20 mx-auto container">
+      <div className="flex flex-col lg:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-3 lg:px-[120px] md:px-12 lg:px-20 mx-auto container">
         {/* Contact Details Section */}
-        <div className="bg-[#FFF3E1] p-6 md:p-10  w-full md:w-1/3 h-150 rounded-l-lg ">
-          <div className="space-y-8">
+        <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:w-1/3  h-auto lg:h-150 rounded-l-lg ">
+          <div className="flex flex-wrap gap-2 sm:flex-col  lg:bg-[#FCEED7] px-2 lg:p-6 lg:rounded-lg space-y-6 lg:space-y-4">
             <div className="flex items-start space-x-2">
-              <IoMdMail className="text-[#E08F34] " size={25} />
-              <div className="font-[raleway]">
+              <IoMdMail className="text-[#E08F34]" size={25} />
+              <div className="font-[raleway] w-full">
                 <p className="font-semibold text-md text-[#E08F34]">Email</p>
                 <p className="text-gray-500 text-base uppercase">
                   qwer2qwertyui
                 </p>
               </div>
             </div>
+
             <div className="flex items-start space-x-2">
-              <FaPhone className="text-[#E08F34] " size={25} />
-              <div className="font-[raleway]">
+              <FaPhone className="text-[#E08F34]" size={25} />
+              <div className="font-[raleway] w-full">
                 <p className="font-semibold text-md text-[#E08F34]">Phone</p>
                 <p className="text-gray-500 text-base uppercase">
                   qwer2qwertyui
                 </p>
               </div>
             </div>
+
             <div className="flex items-start space-x-2">
-              <MdLocationPin className="text-[#E08F34] " size={25} />
-              <div className="font-[raleway]">
+              <MdLocationPin className="text-[#E08F34]" size={25} />
+              <div className="font-[raleway] w-full">
                 <p className="font-semibold text-md text-[#E08F34]">
                   Our Office Location
                 </p>
@@ -73,9 +75,23 @@ export default function ConnectProjectPage() {
 
         {/* Form Section */}
 
-        <div
-          className="w-full flex flex-col md:w-2/3 h-full"
-        >
+        <div className="w-full flex flex-col md:w-2/3 h-full">
+          <div className="flex flex-col items-center justify-center block lg:hidden ">
+            <Image
+              src={"/supporttaLogo.png"}
+              alt="Supportta_Logo"
+              width={25}
+              height={40}
+              className="mb-12 block lg:hidden"
+            />
+
+            <h3 className="font-[raleway] font-[500] text-[18px] text-[#131122E5] mb-2 text-center"> 
+              HAVE A PROJECT ?
+            </h3>
+            <p className="font-[raleway] font-[500] text-[12px] text-[#13112299] text-center">
+              SEND A MESSAGE
+            </p>
+          </div>
           <ContactForm />
           {/* <form className="space-y-4">
             <TextField
@@ -265,7 +281,7 @@ export default function ConnectProjectPage() {
 
       {/* image section */}
       <div className="flex flex-col justify-center items-center ">
-        <p className="font-[medium] font-[raleway] text-[26px]">
+        <p className="font-[medium] font-[raleway] text-[14px] lg:text-[26px]">
           Our team will get back to you as soon as possible.
         </p>
         <div className=" relative flex items-center justify-center w-[86.75%] aspect-[1/.28] mt-12  mx-auto container ">
