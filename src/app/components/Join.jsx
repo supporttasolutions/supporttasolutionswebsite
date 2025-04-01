@@ -38,7 +38,7 @@ function Join() {
     setOpen(true);
   };
   return (
-    <div className="container mx-auto w-full py-[80px] px-2 lg:px-20 ">
+    <div className="container mx-auto w-full py-[30px] px-2 lg:px-20 bg-[#E08F3406] ">
       <Heading
         heading={"Join"}
         description={"Be a part of our team,"}

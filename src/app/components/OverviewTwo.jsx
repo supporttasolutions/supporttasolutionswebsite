@@ -22,17 +22,17 @@ function OverviewTwo() {
             .map((details, i) => (
               <div
                 key={`${index}-${i}`}
-                className=" flex items-start justify-between w-full xl:py-[30px]  py-[80px] px-[120px] md:px-12 lg:px-20 mx-auto container"
+                className=" flex flex-col lg:flex-row items-start justify-between gap-[50px] w-full  py-[50px] lg:py-[30px]  px-4 md:px-12 lg:px-[120px] mx-auto container"
               >
-                <div className=" flex flex-col xl:gap-[35px] w-[54.1%]">
-                  <div className="uppercase font-[inter] text-[#e08f34] font-semibold xl:text-[36px]">
+                <div className=" flex flex-col gap:[10px] lg:gap-[35px] w-auto lg:w-[54.1%]">
+                  <div className="uppercase font-[inter] text-[#e08f34] font-semiboldtext-[12px] lg:text-[36px]  text-center lg:text-start">
                     {details.title1}
                   </div>
-                  <div className="font-[raleway] text-[68px] text-white font-regular">
+                  <div className="font-[raleway] text-[24px] lg:text-[68px] text-white font-regular text-center lg:text-start">
                     {details.title2}
                   </div>
                 </div>
-                <div className="flex flex-col items-center xl:gap-[20px] text-white w-[41.7%]">
+                <div className="flex flex-col  items-center gap-[15px] lg:gap-[20px] text-white w-auto lg:w-[41.7%]">
                   <div className="w-full relative aspect-[5/3]">
                     <Image
                       src={details.image}
@@ -41,10 +41,13 @@ function OverviewTwo() {
                       className="object-fill relative"
                     />
                   </div>
-                  <div className=" font-[inter] font-regular text-[18px]">
+                  <div className="block lg:hidden  font-[raleway] text-[white] font-semibold text-[18px] text-start">
+                    {details.title2}
+                  </div>
+                  <div className=" font-[inter] text-justify font-regular text-[14px] lg:text-[18px]">
                     {details.description}
                   </div>
-                  <div className="font-[raleway] font-medium text-[20px]">
+                  <div className="font-[raleway] font-medium text-[14px] lg:text-[20px]">
                     {details.description2}
                   </div>
                 </div>
