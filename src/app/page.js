@@ -16,7 +16,6 @@ export default function Home() {
         <section className="relative">
           <div className="absolute bottom-0 left-0 w-full h-[150px]  bg-gradient-to-b from-transparent to-white"></div>
         </section>
-       
 
         <WhoAreWe />
 

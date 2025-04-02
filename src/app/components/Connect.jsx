@@ -12,13 +12,21 @@ function Connect() {
       className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px]"
     >
       <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
+        <Image
+          src={"/supporttaLogo.png"}
+          alt="Supportta_Logo"
+          width={25}
+          height={40}
+          className="mb-12 block lg:hidden"
+        />
+
         <Heading
           description={"Let's Build Something Amazing!"}
           heading={"Connect with us"}
         />
         <div className="flex flex-col lg:flex-row justify-center  lg:px-[60px] w-full">
           <div className="flex flex-col items-center lg:gap-[20px] w-full lg:w-1/2">
-            <div className="font-[raleway] xl:text-[32px] font-medium text-[#2b2938]">
+            <div className="font-[raleway] xl:text-[32px] font-medium text-[#2b2938] hidden lg:block">
               Give Your Ideas Life!
             </div>
             <div className="relative w-[50%] aspect-square ">
@@ -29,12 +37,12 @@ function Connect() {
                 className=" object-contain"
               />
             </div>
-            <div className="font-[raleway] xl:text-[22px] font-medium text-[#13112299]">
+            <div className="font-[raleway] text-[14px] lg:text-[22px] font-medium text-[#13112299]">
               Share a Few Quick Details.
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 my-12 lg:my-0">
             <ContactForm />
           </div>
           {/*           
