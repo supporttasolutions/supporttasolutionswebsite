@@ -55,31 +55,35 @@ export default function ServicesSlider() {
       <div className="block lg:hidden ">
         <Heading heading={"Services we scroll"} />
       </div>
-      <div className=" py-4  lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center ">
+      <div className="py-4 px-2  lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center SwiperDiv">
         <Swiper
-          slidesPerView={1}
-          // spaceBetween={25}
+          slidesPerView={1} // Default (mobile screens < 640px)
           loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          // autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Autoplay]}
           breakpoints={{
-            768: { slidesPerView: 4, spaceBetween: 20 },
+            400: { slidesPerView: 1.2, spaceBetween: 15 },
+            640: { slidesPerView: 2, spaceBetween: 15 }, // Show 2 slides on `sm` screens (≥640px)
+            768: { slidesPerView: 2, spaceBetween: 20 }, // Show 2 slides on `md` screens (≥768px)
+            1024: { slidesPerView: 4, spaceBetween: 20 }, // Show 4 slides on `lg` screens (≥1024px)
           }}
+          spaceBetween={15}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="w-full h-[180px] lg:h-[180px] px-2"
+          className="w-full  px-2 h-[180px] lg:h-[180px] "
         >
           {services.map((service, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="display-flex justify-center">
               <div
-                className={`p-4 w-[100%] rounded-lg cursor-pointer transition-all duration-300 ${
+                className={`p-6 lg:p-4 w-full h-full lg:h-[150px]  rounded-lg cursor-pointer transition-all duration-300 ${
                   activeIndex === index
                     ? "bg-white shadow-[10px_10px_10px_0px_#00000014]"
                     : "bg-[#DDDDDD]"
                 } `}
+                style={{border:"1px solid grey"}}
               >
                 <div
-                  className={`h-[100px]
-                flex flex-row-reverse lg:flex-col justify-between md:justify-center items-center
+                  className={`h-[100px] md:h-[140px] lg:h-[100px]
+                flex flex-row-reverse gap-2 lg:gap-[5px] lg:flex-col justify-between md:justify-center lg:justify-between  items-center
                snap-center lg:w-full
                 `}
                 >
@@ -88,9 +92,10 @@ export default function ServicesSlider() {
                     alt={service.title}
                     width={100}
                     height={70}
+                    className="w-[100px] h-[70px] lg:w-[100px] lg:h-[100px] object-cover rounded-lg"
                   />
                   <div className="flex flex-col text-start font-[raleway]">
-                    <p className="text-start lg:text-center font-medium text-[16px] mt-2">
+                    <p className="text-start lg:text-center font-medium text-[20px] lg:text-[16px] mt-2 break-words">
                       {service.title}
                     </p>
                     <Image
@@ -98,15 +103,15 @@ export default function ServicesSlider() {
                       alt="figmaLimg"
                       width={130}
                       height={60}
-                      className="block lg:hidden"
+                      className="block lg:hidden "
                     />
                   </div>
                 </div>
 
-                <div className="flex justify-end mt-1">
+                <div className="flex justify-end mt-2">
                   <ButtonPage
                     btnName="Let's Connect"
-                    className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2 block md:hidden"
+                    className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-8 py-2 block md:hidden"
                   />
                 </div>
               </div>
@@ -114,7 +119,7 @@ export default function ServicesSlider() {
           ))}
         </Swiper>
         {/* Content Section (Hidden on Mobile) */}
-        <div className="hidden md:flex justify-center items-center w-full h-auto px-8 py-8">
+        <div className="hidden lg:flex justify-center items-center w-full h-auto px-8 py-8">
           <div className="flex flex-col items-center text-center max-w-[1200px] w-full mx-auto lg:flex-row lg:text-left lg:items-start">
             {/* Left: Text Content */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">

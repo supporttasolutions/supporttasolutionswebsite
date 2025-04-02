@@ -29,7 +29,7 @@ export default function Services() {
         <ServicesScroll />
       </section>
 
-      <section className="">
+      <section className="mb-[25px]">
         <Phases />
       </section>
     </div>
