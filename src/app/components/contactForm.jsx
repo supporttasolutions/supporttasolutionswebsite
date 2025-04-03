@@ -22,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="space-y-4 w-full font-[raleway] px-4 md:px-0  " onSubmit={handleSubmit}>
+    <form className="space-y-4 w-full font-[raleway] px-4" onSubmit={handleSubmit}>
       <TextField
         label="Full Name"
         name="fullName"
@@ -215,7 +215,7 @@ export default function ContactForm() {
       <div className="flex justify-start mt-8 w-full">
         <ButtonPage
           btnName="Let's Connect"
-          className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-4 w-full lg:w-[250px] "
+          className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-3 w-full lg:w-[250px] "
           
         />
       </div>

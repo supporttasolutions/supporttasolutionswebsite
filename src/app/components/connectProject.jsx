@@ -35,10 +35,10 @@ export default function ConnectProjectPage() {
         description="Give Your Ideas Life!"
       />
 
-      <div className="flex flex-col lg:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-3 lg:px-[120px] md:px-12 lg:px-20 mx-auto container">
+      <div className="flex flex-col md:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-6  md:px-8 lg:px-[120px] mx-auto container">
         {/* Contact Details Section */}
-        <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:w-1/3  h-auto lg:h-150 rounded-l-lg ">
-          <div className="flex flex-wrap gap-2 sm:flex-col  lg:bg-[#FCEED7] px-2 lg:p-6 lg:rounded-lg space-y-6 lg:space-y-4">
+        <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:2/3 lg:w-1/3   h-auto md:h-150 rounded-l-lg ">
+          <div className="flex flex-wrap gap-2 sm:flex-row md:flex-col  lg:bg-[#FCEED7] px-2 lg:p-0 xl:p-6 lg:rounded-lg space-y-6 lg:space-y-4">
             <div className="flex items-start space-x-2">
               <IoMdMail className="text-[#E08F34]" size={25} />
               <div className="font-[raleway] w-full">
@@ -75,8 +75,8 @@ export default function ConnectProjectPage() {
 
         {/* Form Section */}
 
-        <div className="w-full flex flex-col md:w-2/3 h-full">
-          <div className="flex flex-col items-center justify-center block lg:hidden ">
+        <div className="w-full flex flex-col md:3 lg:2/3  h-full">
+          <div className="flex flex-col items-center justify-center block md:hidden ">
             <Image
               src={"/supporttaLogo.png"}
               alt="Supportta_Logo"

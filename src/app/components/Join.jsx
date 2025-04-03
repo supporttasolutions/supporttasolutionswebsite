@@ -38,7 +38,7 @@ function Join() {
     setOpen(true);
   };
   return (
-    <div className="container mx-auto w-full py-[30px] px-2 lg:px-20 bg-[#E08F3406] ">
+    <div className="lg:container lg:mx-auto w-full py-[30px] px-6 lg:px-20 bg-[#E08F3406] ">
       <Heading
         heading={"Join"}
         description={"Be a part of our team,"}
@@ -48,7 +48,7 @@ function Join() {
         {careers.map((career, index) => (
           <div
             key={index}
-            className="p-6 bg-white shadow-lg rounded-lg flex flex-col lg:flex-row justify-between items-center w-full"
+            className="p-6 bg-white shadow-lg rounded-lg flex flex-col sm:flex-row lg:flex-row justify-between items-center w-full"
           >
             <div className="flex flex-col items-start ">
               <div className="flex justify-center bg-[#FDF9F5] w-15 h-15 lg:w-20 lg:h-20 rounded-full">
@@ -72,7 +72,7 @@ function Join() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-end w-full lg:w-auto mt-5">
+            <div className="flex justify-end w-full sm:w-auto lg:w-auto mt-5">
               <ButtonPage
                 btnName={"Apply Now"}
                 className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-3 py-3 md:px-4 md:py-3 cursor-pointer"
