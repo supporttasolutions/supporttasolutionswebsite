@@ -12,9 +12,29 @@
     font-family: "Sora", sans-serif;
 } */
 
-@media (min-width: 1024px) {
-    .lg-white-bg {
-      background: white !important;
-    }
+.SwiperDiv .swiper {
+    overflow: hidden; /* Default behavior */
   }
   
+  /* On mobile screens, ensure overflow is controlled properly */
+  @media (max-width: 640px) {
+    .SwiperDiv .swiper {
+      overflow: clip; /* Prevents unwanted overflow but doesn't affect layout */
+    }
+  }
+  /* SwiperDiv.swiper {
+  overflow: hidden !important;
+}
+@media (max-width: 640px) {
+    .SwiperDiv .swiper {
+        overflow: visible !important;
+      }
+    } */
+
+@media (min-width: 1024px) {
+  .lg-white-bg {
+    background: white !important;
+  }
+}
+
+
