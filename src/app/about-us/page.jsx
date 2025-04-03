@@ -32,7 +32,7 @@ function page() {
         <section className=" mt-16 lg:mt-28">
           <MissionVision />{" "}
         </section>
-        <section className="mt-28 hidden lg:block">
+        <section className=" lg:mt-0 xl:mt-28 hidden lg:block">
         <Overview />
         </section>
         <section className="mt-16 lg:mt-28">

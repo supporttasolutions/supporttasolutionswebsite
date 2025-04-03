@@ -22,17 +22,17 @@ function OverviewTwo() {
             .map((details, i) => (
               <div
                 key={`${index}-${i}`}
-                className=" flex flex-col lg:flex-row items-start justify-between gap-[50px] w-full  py-[50px] lg:py-[30px]  px-4 md:px-12 lg:px-[120px] mx-auto container"
+                className=" flex flex-col sm:flex-row  items-start justify-between gap-[50px] w-full  py-[50px] lg:py-[30px]  px-6 md:px-12 lg:px-[50px] xl:px-[120px] lg:mx-auto lg:container"
               >
-                <div className=" flex flex-col gap:[10px] lg:gap-[35px] w-auto lg:w-[54.1%]">
-                  <div className="uppercase font-[inter] text-[#e08f34] font-semiboldtext-[12px] lg:text-[36px]  text-center lg:text-start">
+                <div className=" flex flex-col gap:[10px] lg:gap-[35px] w-auto w-full sm:w-[40%] lg:w-[54.1%]">
+                  <div className="uppercase font-[inter] text-[#e08f34] font-semibold text-[12px] sm:text-[22px] lg:text-[32px] xl:text-[36px]  text-center sm:text-start">
                     {details.title1}
                   </div>
-                  <div className="font-[raleway] text-[24px] lg:text-[68px] text-white font-regular text-center lg:text-start">
+                  <div className="font-[raleway] text-[24px] sm:text-[28px] lg:text-[48px] xl:text-[68px] text-white font-regular text-center sm:text-start">
                     {details.title2}
                   </div>
                 </div>
-                <div className="flex flex-col  items-center gap-[15px] lg:gap-[20px] text-white w-auto lg:w-[41.7%]">
+                <div className="flex flex-col  items-center gap-[15px] lg:gap-[20px] text-white w-auto sm:w-[60%] lg:w-[41.7%]">
                   <div className="w-full relative aspect-[5/3]">
                     <Image
                       src={details.image}
@@ -41,14 +41,16 @@ function OverviewTwo() {
                       className="object-fill relative"
                     />
                   </div>
-                  <div className="block lg:hidden  font-[raleway] text-[white] font-semibold text-[18px] text-start">
+                  <div className="block lg:hidden  font-[raleway] text-[white] font-semibold sm:text-[22px] text-[18px] text-start">
                     {details.title2}
                   </div>
-                  <div className=" font-[inter] text-justify font-regular text-[14px] lg:text-[18px]">
-                    {details.description}
+                  <div className="  ">
+                     
+                     <p  className="text-justify text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[18px] font-[inter] font-regular" > {details.description} </p>
                   </div>
-                  <div className="font-[raleway] font-medium text-[14px] lg:text-[20px]">
-                    {details.description2}
+                  <div className="">
+                  <p  className="text-justify text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[18px] font-[raleway] font-regular" > {details.description2} </p>
+
                   </div>
                 </div>
               </div>

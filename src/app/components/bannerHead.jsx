@@ -4,14 +4,14 @@ import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,page }) {
   return (
-    <div className="font-[inter] px-4 bg-white flex flex-col items-start md:items-center lg:items-center">
+    <div className="font-[inter] px-6 md:px-16 bg-white flex flex-col items-start sm:items-center md:items-center lg:items-center">
       <h1
         className="text-[52px] lg:text-[64px] mb-4 lg:mb-0 font-medium leading-[1.2] lg:leading-normal break-words"
         style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         {head}
       </h1>
-      <p className="font-semibold text-[22px] text-[#000000] leading-[1.2] lg:leading-normal break-words capitalize">
+      <p className="font-semibold sm:text-center text-[22px] text-[#000000] leading-[1.2] lg:leading-normal break-words capitalize">
         {desc}
       </p>
       {page === "connect" && (
@@ -25,11 +25,11 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
       {buttonsMob?.length > 0 ? (
         <div className="block lg:hidden  mt-8 flex flex-col flex-col-reverse gap-8">
           {longDesc && (
-            <p className="text-start font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] w-[300px] capitalize">
+            <p className="text-justify  sm:text-center font-regular font-[inter] text-[16px] lg:text-[18px] text-[rgba(19,17,34,0.6)] w-full capitalize">
               {longDesc}
             </p>
           )}
-          <div className="flex flex-col justify-start gap-4">
+          <div className="flex flex-col justify-start sm:justify-center sm:items-center gap-4">
             {buttonsMob.map((btn, index) => (
               <ButtonPage key={index} btnName={btn.text} className={btn.className} />
             ))}
@@ -37,7 +37,7 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
         </div>
       ) : (
         // 🟡 MOBILE: If only `buttons` exist (same as large screens, but column layout)
-        <div className="block lg:hidden w-full mt-8 flex flex-col lg:justify-center items-start md:items-center lg:items-center gap-4">
+        <div className="block lg:hidden w-full mt-8 flex flex-col lg:justify-center items-start sm:items-center md:items-center lg:items-center gap-4">
           {buttons?.length > 0 ? (
             buttons.map((btn, index) => (
               <ButtonPage key={index} btnName={btn.text} className={btn.className} />

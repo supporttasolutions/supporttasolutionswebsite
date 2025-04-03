@@ -8,7 +8,7 @@ function Footer() {
     <footer
       className={`${Footerstyle.footerMain} relative text-white xl:pt-[60px] pt-[30px] pb-[10px] lg:pt-[50px] lg:pb-[10px] flex flex-col justify-center items-center `}
     >
-      <div className="flex flex-col-reverse lg:flex-col  w-full  px-4 lg:px-[120px] font-[raleway]">
+      <div className="flex flex-col-reverse lg:flex-col  w-full  px-4 lg:px-[120px] font-[raleway] mx-auto container">
         {/* vertcal div1 */}
 
         <div className="flex flex-wrap justify-between w-full footerSection gap-4 my-[20px] lg:my-0">
@@ -106,7 +106,7 @@ function Footer() {
       </div>
       {/* vertical div3 */}
 
-      <div className="flex justify-center lg:justify-start items-center text-[8px] font-regular px-4 lg:px-[120px] lg:text-[18px] w-full font-[inter]">
+      <div className="flex justify-center lg:justify-start items-center text-[8px] font-regular px-4 lg:px-[120px] lg:text-[18px] w-full font-[inter] mx-auto container">
         Copyright @ 2025 Supportta Solutions Private Limited. All rights
         reserved
       </div>
