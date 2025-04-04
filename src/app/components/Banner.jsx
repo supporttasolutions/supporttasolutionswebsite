@@ -18,7 +18,7 @@ function Banner() {
         <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute w-[100%] h-full z-10 flex justify-between items-center container text-white px-[120px]">
+      <div className="absolute w-[100%] h-full z-10 flex justify-between items-center container text-white px-[120px] hidden">
         <div className="lg:w-[75%] flex flex-col lg:gap-[40px] xl:gap-[60px]">
           <div className="flex flex-col xl:gap-[10px] lg:gap-[8px]">
             <div className="xl:text-[64px] lg:text-[47px] font-[inter]">

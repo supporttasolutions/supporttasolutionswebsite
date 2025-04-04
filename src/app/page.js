@@ -14,7 +14,7 @@ export default function Home() {
         <Socialmedia />
         <Banner />
         <section className="relative">
-          <div className="absolute bottom-0 left-0 w-full h-[150px]  bg-gradient-to-b from-transparent to-white"></div>
+          <div className="absolute bottom-0 left-0 w-full h-[150px] 2xl:h-[180px]  bg-gradient-to-b from-transparent to-white"></div>
         </section>
 
         <WhoAreWe />
