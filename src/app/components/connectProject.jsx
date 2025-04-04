@@ -37,7 +37,7 @@ export default function ConnectProjectPage() {
 
       <div className="flex flex-col md:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-6  md:px-8 lg:px-[120px] mx-auto container">
         {/* Contact Details Section */}
-        <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:2/3 lg:w-1/3   h-auto md:h-150 rounded-l-lg ">
+        <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:2/3 lg:w-2/3   h-auto md:h-150 rounded-l-lg ">
           <div className="flex flex-wrap gap-2 sm:flex-row md:flex-col  lg:bg-[#FCEED7] px-2 lg:p-0 xl:p-6 lg:rounded-lg space-y-6 lg:space-y-4">
             <div className="flex items-start space-x-2">
               <IoMdMail className="text-[#E08F34]" size={25} />
@@ -281,7 +281,7 @@ export default function ConnectProjectPage() {
 
       {/* image section */}
       <div className="flex flex-col justify-center items-center ">
-        <p className="font-[medium] font-[raleway] text-[14px] lg:text-[26px]">
+        <p className="font-[medium] font-[raleway] text-[14px] lg:text-[26px] mx-auto container text-center px-4 lg:px-[120px]">
           Our team will get back to you as soon as possible.
         </p>
         <div className=" relative flex items-center justify-center w-[86.75%] aspect-[1/.28] mt-12  mx-auto container ">

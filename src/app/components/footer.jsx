@@ -34,7 +34,7 @@ function Footer() {
               <li>ECommerce Website</li>
             </ul>
           </div>
-          <div className="flex flex-col gap-[10px] lg:gap-[25px] xl:gap-[30px] h-max lg:w-[262px]">
+          <div className="flex flex-col gap-[10px] lg:gap-[25px] xl:gap-[30px] h-max ">
             <div className="text-16 lg:text-[20px] font-semibold text-[#E08F34] ">
               Contact Us
             </div>
@@ -68,7 +68,7 @@ function Footer() {
 
         {/* vertical; div 2 */}
         <div className="flex justify-between h-[80px] lg:h-[116px]">
-          <div className="flex flex-col justify-center gap-[20px] lg:gap-[12px] xl:w-[180px] lg:w-[160px]">
+          <div className="flex flex-col justify-center gap-[20px] lg:gap-[12px] ">
             <div className="text-[#E08F34] text-12px lg:text-[18px] inter tracking-[0.2em]">
               Follow us
             </div>
@@ -88,14 +88,14 @@ function Footer() {
           <div className="flex justify-start items-center">
             <form className="flex flex-col lg:flex-row items-center justify-center gap-[12px] lg:gap-[20px]  lg:h-[40px]">
               <input
-                className="bg-[#FDF9F3] text-black placeholder:text-[8.5px] lg:placeholder:text-[14px] placeholder:text-[#00000061] px-3 lg:px-[20px] py-0.5 lg:py-[10px] rounded-[4px] lg:rounded-[8px]  lg:border-[.5px] border-[#00000033] w-[150px] lg:w-[260px]"
+                className="bg-[#FDF9F3] text-black placeholder:text-[8.5px] lg:placeholder:text-[14px] placeholder:text-[#00000061] px-3 lg:px-[20px] py-0.5 lg:py-[10px] rounded-[4px] lg:rounded-[8px]  lg:border-[.5px] border-[#00000033] w-[180px] sm:w-auto "
                 type="text"
                 placeholder="Enter your Number"
               />
               <div className="flex items-start w-full">
                 <button
                   type="submit"
-                  className="flex justify-center items-center text-[10px] lg:text-[16px] rounded-[4px] lg:rounded-[5px] font-medium  lg:w-[130px] bg-linear-to-t from-[#20973A] to-[#326F46]  px-[10px] py-[5px] lg:p-[10px] cursor-pointer"
+                  className="flex justify-center items-center text-[10px] lg:text-[16px] rounded-[4px] lg:rounded-[5px] font-medium   bg-linear-to-t from-[#20973A] to-[#326F46]  px-[10px] py-[5px] lg:p-[10px] cursor-pointer"
                 >
                   Let’s Connect
                 </button>

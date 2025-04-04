@@ -37,12 +37,20 @@ export default function SolutionsPage() {
   return (
     <section
       id="white-section"
-      className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] min-h-[150vh] "
+      className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] bg-red-200 min-h-[150vh] mt-16 lg:mt-8 pb-4 "
     >
-      <div className=" w-[83%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container ">
+      <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container px-6 lg:px-[120px] ">
+        <Image
+          src={"/supporttaLogo.png"}
+          alt="Supportta_Logo"
+          width={25}
+          height={40}
+          className="mb-12 block lg:hidden"
+        />
+
         <Heading
           heading="solutions we offer"
-          description="  Explore our cutting-edge  business solutions"
+          description="Explore our cutting-edge  business solutions"
           className="text-center"
         />
 
@@ -53,6 +61,7 @@ export default function SolutionsPage() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md w-full  max-w-[930px] mx-auto min-h-[285px] border border-[#F5E9DA] transition-transform duration-300 hover:scale-[1.05]"
               >
+                <div className="flex justify-center md:justify-start">
                 <div className="flex justify-center bg-[#FDF9F5] w-20 h-20 lg:w-22 lg:h-22 xl:w-24 xl:h-24 rounded-full">
                   <Image
                     src={card.icon}
@@ -63,6 +72,9 @@ export default function SolutionsPage() {
                   />
                 </div>
 
+
+                </div>
+               
                 <div className="text-center sm:text-start font-[raleway]">
                   <h4 className="font-semibold text-[20px] text-[#131122E5] mt-3">
                     {card.head}

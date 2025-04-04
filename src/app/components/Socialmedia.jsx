@@ -48,7 +48,7 @@ function Socialmedia() {
   }, []);
 
   return (
-    <div className="fixed z-50 flex items-center justify-center flex-col gap-[20px] translate-x-[20px] translate-y-[50%]">
+    <div className="hidden lg:flex fixed z-50 flex items-center justify-center flex-col gap-[20px] translate-x-[20px] translate-y-[50%]">
       <FaFacebook
         className={`lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer`} 
         style={{ color: topColor }}

@@ -54,11 +54,31 @@ const AccordionDetails = styled(MuiAccordionDetails)(() => ({
  
 }));
 
-const StyledTypography = styled(Typography)({
-  fontSize: "34px",
-  fontWeight: "regular",
-  fontFamily: "var(--font-raleway)",
-});
+// const StyledTypography = styled(Typography)({
+//   fontSize: "34px",
+//   fontWeight: "regular",
+//   fontFamily: "var(--font-raleway)",
+// });
+
+const StyledTypography = styled(Typography)`
+  font-size: 34px; /* Default for large screens */
+  font-weight: regular;
+  font-family: var(--font-raleway);
+
+  @media (max-width: 1024px) {
+    font-size: 28px; /* Medium screens (tablets) */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px; /* Small screens (large phones) */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px; /* Extra small screens (mobile) */
+  }
+`;
+
+
 
 
 export default function CustomizedAccordions() {
