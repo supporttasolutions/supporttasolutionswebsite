@@ -6,12 +6,12 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
   return (
     <div className="font-[inter] px-6 md:px-16 bg-white flex flex-col items-start sm:items-center md:items-center lg:items-center mx-auto container">
       <h1
-        className="text-[52px] lg:text-[64px] mb-4 lg:mb-0 font-medium leading-[1.2] lg:leading-normal break-words"
+        className="text-[48px] lg:text-[64px] mb-4 lg:mb-0 font-medium leading-[1.2] lg:leading-normal break-words"
         style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         {head}
       </h1>
-      <p className="font-semibold sm:text-center text-[22px] text-[#000000] leading-[1.2] lg:leading-normal break-words capitalize">
+      <p className="font-semibold sm:text-center text-[20px] lg:text-[22px] text-[#000000] leading-[1.2] lg:leading-normal break-words capitalize">
         {desc}
       </p>
       {page === "connect" && (
@@ -43,7 +43,7 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
               <ButtonPage key={index} btnName={btn.text} className={btn.className} />
             ))
           ) : (
-            <p className="text-start lg:text-center w-full items-center font-regular font-[inter] text-[18px] text-[rgba(19,17,34,0.6)] capitalize ">
+            <p className="text-start lg:text-center w-full items-center font-regular font-[inter] text-[16px] lg:text-[18px] text-[rgba(19,17,34,0.6)] capitalize ">
               {longDesc}
             </p>
           )}

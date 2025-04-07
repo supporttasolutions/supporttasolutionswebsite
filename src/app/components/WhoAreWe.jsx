@@ -1,46 +1,71 @@
-import Image from "next/image";
-import React from "react";
-import whoWeAreStyle from "./whoweare.module.css";
-import Heading from "./Heading";
+import Image from 'next/image';
+import React from 'react';
+import whoWeAreStyle from './whoweare.module.css';
+import Heading from './Heading';
 function WhoAreWe() {
   return (
     <section
       id="white-section"
-      className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-between  lg:py-[80px] min-h-[200vh] bg-white"
+      className=" w-full  flex items-center justify-between  lg:py-[80px] bg-white"
     >
-      <div className=" w-[100%]  px-[120px] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] ">
+      <div className=" w-full mx-auto container  px-6 lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center lg:gap-[60px] ">
         <Heading
-          description={"We Transform Ideas Into Powerful Digital Realities"}
-          heading={"Who are we"}
+          description={'We Transform Ideas Into Powerful Digital Realities'}
+          heading={'Who are we'}
         />
-        <div className="flex justify-between   w-full  h-auto">
-          <div className="lg:w-[100%] lg:text-[20px] xl:text-[24px] text-justify text-[#13112299] font-normal font-[inter]">
+        <div className="flex flex-col-reverse lg:flex-row justify-between gap-8 md:gap-16 w-full  h-auto mt-10 lg:mt-0">
+          <div className="lg:w-full text-[14px] lg:text-[20px] xl:text-[24px] text-justify text-[#13112299] font-normal font-[inter]">
             The future belongs to those who innovate – and that’s where we come
             in. With a team of young, dynamic minds, we turn your ideas into
             digital realities that inspire and deliver. Every project is a that
             not only meet but exceed expectations. Your vision, powered by our
             expertise, becomes a reality that drives growth, efficiency, and
-            success. Together,{" "}
+            success. Together,{' '}
             <span className="font-medium text-[#13112299]">
               we don’t just adapt to the future – we shape it.
-            </span>{" "}
+            </span>{' '}
             Let’s build something extraordinary
           </div>
           <div
-            className={`${whoWeAreStyle.imagediv} w-[100%] relative flex items-center justify-center`}
+            className={`${whoWeAreStyle.imagedivLarge} w-full relative flex items-center justify-center hidden lg:block`}
           >
+            <div className={``}></div>
             <Image
               src="/who-are-we.png"
               width={500}
               height={500}
-              className="h-full w-[70%] object-cover rounded-[20px]"
+              className="relative left-1/2 transform -translate-x-1/2 object-cover rounded-[20px] lg:w-[340px] xl:w-[380px] "
               alt=""
             />
           </div>
+
+
+
+
+          {/* Image Section with Overlapping Effect */}
+          <div className={`${whoWeAreStyle.imagediv} relative w-full flex items-center justify-center block lg:hidden`}>
+            {/* Main Image */}
+            <Image
+              src="/whoare.png"
+              width={500}
+              height={500}
+              className="h-full  object-cover rounded-[20px] shadow-lg z-9 w-[230px] sm:w-[350px]  md:w-[380px] aspect-[3/2] "
+              alt="Who We Are"
+            />
+            
+            {/* Overlapping Effect for Mobile */}
+            <div className="absolute w-[230px] sm:w-[350px] md:w-[380px] top-[10%] md:transform translate-x-[8%] md:-translate-y-[0%] h-full  rounded-[20px] ">
+            <Image
+              src="/whoree.png"
+              width={508}
+              height={358}
+              className="h-full object-cover rounded-[20px] shadow-lg"
+              alt="Who We Are"
+            />
+            </div>
+          </div>
         </div>
-        {/* <div className="relative aspect-[12/11] lg:w-[53%] flex items-center justify-center">
-                        <Image src="/who-are-we.png" alt="who-are-we" fill className="object-contain" />
-                    </div> */}
+       
       </div>
     </section>
   );

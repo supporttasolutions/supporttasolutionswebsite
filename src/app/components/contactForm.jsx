@@ -16,13 +16,34 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+  
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwnPbImFKoJtV6cg17zLSovbQTXm4oVEFY9yiLfHVrmAL7lBq8o5nYL4I6P61p6m9R0-g/exec";
+  
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors", // Google Apps Script requires no-cors
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      // You won't get a response in no-cors, so use toast or alert as feedback
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
-
+  
   return (
-    <form className="space-y-4 w-full font-[raleway] px-4" onSubmit={handleSubmit}>
+    <form
+      className="space-y-4 w-full font-[raleway] px-6"
+      onSubmit={handleSubmit}
+    >
       <TextField
         label="Full Name"
         name="fullName"
@@ -33,7 +54,7 @@ export default function ContactForm() {
         sx={{
           "& .MuiInputLabel-root": {
             color: "rgba(0, 0, 0, 0.30)",
-            fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInputLabel-root.Mui-focused": {
             color: "#20973A",
@@ -56,7 +77,7 @@ export default function ContactForm() {
           },
           "& .MuiInputBase-input": {
             fontSize: "16px",
-            fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
         }}
       />
@@ -71,11 +92,11 @@ export default function ContactForm() {
         sx={{
           "& .MuiInputLabel-root": {
             color: "rgba(0, 0, 0, 0.30)",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInputLabel-root.Mui-focused": {
             color: "#20973A",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInput-underline:before": {
             borderBottomColor: "#E0E3E7", // Default border color
@@ -94,7 +115,7 @@ export default function ContactForm() {
           },
           "& .MuiInputBase-input": {
             fontSize: "16px",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
         }}
       />
@@ -109,11 +130,11 @@ export default function ContactForm() {
         sx={{
           "& .MuiInputLabel-root": {
             color: "rgba(0, 0, 0, 0.30)",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInputLabel-root.Mui-focused": {
             color: "#20973A",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInput-underline:before": {
             borderBottomColor: "#E0E3E7", // Default border color
@@ -132,7 +153,7 @@ export default function ContactForm() {
           },
           "& .MuiInputBase-input": {
             fontSize: "16px",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
         }}
       />
@@ -146,11 +167,11 @@ export default function ContactForm() {
         sx={{
           "& .MuiInputLabel-root": {
             color: "rgba(0, 0, 0, 0.30)",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInputLabel-root.Mui-focused": {
             color: "#20973A",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInput-underline:before": {
             borderBottomColor: "#E0E3E7", // Default border color
@@ -169,7 +190,7 @@ export default function ContactForm() {
           },
           "& .MuiInputBase-input": {
             fontSize: "16px",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
         }}
       />
@@ -185,11 +206,11 @@ export default function ContactForm() {
         sx={{
           "& .MuiInputLabel-root": {
             color: "rgba(0, 0, 0, 0.30)",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInputLabel-root.Mui-focused": {
             color: "#20973A",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
           "& .MuiInput-underline:before": {
             borderBottomColor: "#E0E3E7", // Default border color
@@ -208,7 +229,7 @@ export default function ContactForm() {
           },
           "& .MuiInputBase-input": {
             fontSize: "16px",
-             fontFamily: "Raleway, sans-serif"
+            fontFamily: "Raleway, sans-serif",
           },
         }}
       />
@@ -216,7 +237,6 @@ export default function ContactForm() {
         <ButtonPage
           btnName="Let's Connect"
           className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-3 w-full lg:w-[250px] "
-          
         />
       </div>
     </form>

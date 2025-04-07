@@ -119,13 +119,13 @@ export default function Navbar() {
         {/* Close Button */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-5 right-5 text-[#131122] transition-transform duration-600 ease-in-out "
+          className={`${isTransparent ? "text-white" :"text-[#131122]"} absolute top-5 right-5  transition-transform duration-600 ease-in-out`}
         >
           <X size={35} />
         </button>
 
         {/* Mobile Nav Links */}
-        <div className="flex flex-col items-center gap-8 text-md font-[inter] text-[#131122] uppercase">
+        <div className={` ${isTransparent ? "text-white" : "text-[#131122]"} flex flex-col items-center  gap-8 text-md font-[inter] uppercase`}>
           {[
             { name: "Services", href: "/services" },
             { name: "Careers", href: "/careers" },

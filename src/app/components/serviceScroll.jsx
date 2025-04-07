@@ -48,7 +48,7 @@ export default function ServicesSlider() {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] px-3 lg:py-[80px] lg:px-[120px] mx-auto lg-white-bg">
+    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] px-6 lg:py-[80px] lg:px-[50px] xl:px-[120px] mx-auto lg-white-bg">
       {/* <div
       className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w- h-[300px]  container py-[30px] lg:py-[80px] px-3 lg:px-[120px] mx-auto"
     > */}
@@ -59,7 +59,7 @@ export default function ServicesSlider() {
         <Swiper
           slidesPerView={1} // Default (mobile screens < 640px)
           loop={true}
-          // autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           modules={[Autoplay]}
           breakpoints={{
             400: { slidesPerView: 1.2, spaceBetween: 15 },
@@ -69,17 +69,17 @@ export default function ServicesSlider() {
           }}
           spaceBetween={15}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="w-full  px-2 h-[180px] lg:h-[180px] "
+          className="w-full  px-2 h-[200px] lg:h-[180px] "
         >
           {services.map((service, index) => (
-            <SwiperSlide key={index} className="display-flex justify-center">
+            <SwiperSlide key={index} className="display-flex justify-center ">
               <div
-                className={`p-6 lg:p-4 w-full h-full lg:h-[150px]  rounded-lg cursor-pointer transition-all duration-300 ${
+                className={`p-6 lg:p-4 w-full h-[180px] lg:h-[150px]  rounded-lg cursor-pointer transition-all duration-300 ${
                   activeIndex === index
                     ? "bg-white shadow-[10px_10px_10px_0px_#00000014]"
-                    : "bg-[#DDDDDD]"
+                    : " bg-white lg:bg-[#DDDDDD]"
                 } `}
-                style={{border:"1px solid grey"}}
+               
               >
                 <div
                   className={`h-[100px] md:h-[140px] lg:h-[100px]
@@ -133,7 +133,7 @@ export default function ServicesSlider() {
               <h2 className="text-[#131122E5] font-[raleway] font-medium text-[26px] mt-4">
                 {services[activeIndex].title}
               </h2>
-              <p className="text-[#13112299]  font-[inter] font-regular text-[20px] mt-4">
+              <p className="text-[#13112299]  font-[inter] font-regular text-[20px] mt-4 w-[500px]">
                 {services[activeIndex].description}
               </p>
               <div className="mt-6">
