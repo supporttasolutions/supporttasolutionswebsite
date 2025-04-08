@@ -18,21 +18,21 @@ function Banner() {
         <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute w-[100%] h-full z-10 flex justify-between items-center container text-white px-[120px] hidden">
+      <div className="absolute   h-full z-10 flex justify-between items-center container text-white px-6 lg:px-[50px] xl:px-[120px]">
         <div className="lg:w-[75%] flex flex-col lg:gap-[40px] xl:gap-[60px]">
           <div className="flex flex-col xl:gap-[10px] lg:gap-[8px]">
-            <div className="xl:text-[64px] lg:text-[47px] font-[inter]">
+            <p className="text-[56px] lg:text-[47px] xl:text-[56px]  font-[inter]">
               Supporting Your Vision with
-            </div>
-            <div className="xl:text-[64px] lg:text-[47px] font-semibold font-[raleway] text-[#E08F34]">
+            </p>
+            <p className=" text-[36px] lg:text-[47px]  xl:text-[56px] font-semibold font-[raleway] text-[#E08F34]">
               Web Development...
-            </div>
+            </p>
           </div>
           <div className="flex flex-col lg:gap-[40px] xl:gap-[50px] lg:w-[76%] font-[inter]">
-            <div className="xl:text-[24px] lg:text-[19px]">
+            <p className="text-[16px] lg:text-[19px] xl:text-[24px] capitalize">
               From concept to execution, we deliver innovative software that
               drives results and scales with your business
-            </div>
+            </p>
             <div className="flex lg:gap-[20px] xl:text-[20px] lg:text-[16px] font-regular font-[inter]">
               <Buttons
                 title={"Let's Connect"}
@@ -41,11 +41,11 @@ function Banner() {
               />
 
               <button
-                className="relative  xl:py-[15px] lg:px-[20px] lg:py-[10px] text-white overflow-hidden transition-all duration-300 hover:bg-[#C18830]/20 cursor-pointer"
+                className="relative hidden lg:block lg:py-[10px] xl:py-[15px] lg:px-[20px]  text-white overflow-hidden transition-all duration-300 hover:bg-[#C18830]/20 cursor-pointer"
                 style={{
                   backgroundColor: "transparent",
                   borderRadius: "10px",
-                  width:"250px"
+                  width: "250px",
                 }}
               >
                 <span className="relative z-10">Check Our Services</span>
@@ -65,7 +65,7 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div className="lg:w-[30%] flex items-center justify-center mt-50">
+        <div className="lg:w-[30%] flex items-center justify-center mt-50 hidden lg:block">
           {/* className="lg:w-[250px] lg:h-[50%] xl:w-[300px] xl:h-[50%] 2xl:w-[280px] 2xl:h-[280px]  */}
           <Image
             src="/image-three.png"

@@ -18,8 +18,13 @@
   
   /* On mobile screens, ensure overflow is controlled properly */
   @media (max-width: 640px) {
+    .swiper-wrapper
+    {
+      height: 180px;
+    }
     .SwiperDiv .swiper {
       overflow: clip; /* Prevents unwanted overflow but doesn't affect layout */
+      height: 200px;
     }
   }
   /* SwiperDiv.swiper {

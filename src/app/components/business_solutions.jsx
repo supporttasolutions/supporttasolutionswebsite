@@ -37,15 +37,15 @@ export default function SolutionsPage() {
   return (
     <section
       id="white-section"
-      className="2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px] bg-[#FDF9F3] bg-red-200 min-h-[150vh] mt-16 lg:mt-8 pb-4 "
+      className=" w-full  flex items-center justify-center bg-[#FDF9F3]   mt-16 lg:mt-8  "
     >
-      <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container px-6 lg:px-[120px] ">
+      <div className=" w-full flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px]  container  py-8 lg:py-[80px] px-6 lg:px-[50px] xl:px-[120px]">
         <Image
           src={"/supporttaLogo.png"}
           alt="Supportta_Logo"
           width={25}
           height={40}
-          className="mb-12 block lg:hidden"
+          className=" block lg:hidden"
         />
 
         <Heading
@@ -76,7 +76,7 @@ export default function SolutionsPage() {
                 </div>
                
                 <div className="text-center sm:text-start font-[raleway]">
-                  <h4 className="font-semibold text-[20px] text-[#131122E5] mt-3">
+                  <h4 className="font-semibold text-[18px] xl:text-[20px] text-[#131122E5] mt-3">
                     {card.head}
                   </h4>
                   <div className="flex justify-center sm:justify-start flex-wrap gap-2 mt-2 text-[12px]  uppercase text-[#131122E5]">
