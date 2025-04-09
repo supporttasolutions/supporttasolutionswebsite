@@ -45,7 +45,6 @@ export default function ContactForm() {
         projectDetails: "",
       });
     } catch (error) {
-      console.error("Error submitting form", error);
       alert("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);

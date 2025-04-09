@@ -23,7 +23,6 @@ export default function ContactDialog({ open, setOpen }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
   };
   //   const [open, setOpen] = useState(false); // State for modal
 
@@ -31,11 +30,7 @@ export default function ContactDialog({ open, setOpen }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     console.log("Form Data Submitted:", formData);
-  //     setOpen(true); // Open modal on form submission
-  //   };
+
 
   const handleClose = () => {
     setOpen(false); // Close modal

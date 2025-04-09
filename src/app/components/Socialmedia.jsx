@@ -84,7 +84,7 @@ function Socialmedia() {
         className="lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer"
         style={{ color: topColor }}
       />
-      <div className="relative h-[141px] w-[2px]">
+      <div className="relative h-[140px] w-[2px]">
         <div
           className="absolute top-0 h-[70px] w-full"
           style={{ backgroundColor: topColor }}
