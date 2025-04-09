@@ -10,7 +10,7 @@ export default function BannerHead({
   longDesc,
   page,
 }) {
-  console.log(  buttons, "buttons");
+
   return (
     <div className="font-[inter] px-6 md:px-16 bg-white flex flex-col items-start sm:items-center md:items-center lg:items-center mx-auto container">
       <h1
@@ -43,6 +43,7 @@ export default function BannerHead({
                 key={index}
                 btnName={btn.text}
                 className={btn.className}
+                variant={btn.variant}
               />
             ))}
           </div>
@@ -56,6 +57,8 @@ export default function BannerHead({
                 key={index}
                 btnName={btn.text}
                 className={btn.className}
+                variant={btn.variant}
+                href={btn.href}
               />
             ))
           ) : (
@@ -72,7 +75,7 @@ export default function BannerHead({
           <div className="flex flex-row justify-center gap-12 mt-8">
             {buttons.map((btn, index) => (
               <Link key={index} href={btn.href}>
-                <ButtonPage btnName={btn.text} className={btn.className} />
+                <ButtonPage btnName={btn.text} className={btn.className} variant={btn.variant} />
               </Link>
             ))}
           </div>

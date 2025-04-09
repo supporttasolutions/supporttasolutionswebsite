@@ -1,4 +1,3 @@
-import BannerCommon from "../components/BannerCommon";
 import BannerHead from "../components/BannerHead";
 import Connect from "../components/Connect";
 import MissionVision from "../components/MissionVision";
@@ -11,18 +10,21 @@ function page() {
       <div className="2xl:min-h-auto lg:min-h-screen w-full  lg:py-[80px] ">
         <section className="mt-28">
           <BannerHead
+          
             buttons={[
               {
                 text: "Free Consultation",
                 className:
                   "bg-linear-to-t from-[#20973A] to-[#326F46] text-white w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
                 href: "/connect-us",
+                variant: "solid",
               },
               {
                 text: "Our services",
                 className:
                   "text-linear-to-t from-[#20973A] to-[#326F46] font-[600] w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
                 href: "/services",
+                variant: "outline",
               },
             ]}
             desc={

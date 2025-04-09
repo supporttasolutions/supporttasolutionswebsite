@@ -1,7 +1,7 @@
 import Footerstyle from "./footer.module.css";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Mail, MapPinned, Phone } from "lucide-react";
-import ButtonPage from "./ButtonPage";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -16,10 +16,17 @@ function Footer() {
             <div className="text-[16px] lg:text-[20px]  font-semibold text-[#E08F34]">
               Resources
             </div>
-            <ul className="flex flex-col gap-[10px] lg:gap-[15px] xl:gap-[18px]  text-[12px] lg:text-[18px]  font-medium ">
-              <li>Careers</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
+
+            <ul className="flex flex-col gap-[10px] lg:gap-[15px] xl:gap-[18px]  text-[12px] lg:text-[18px]  font-medium cursor-pointer">
+              <li>
+                <Link href="/careers">Careers</Link>
+              </li>
+              <li>
+                <Link href="/about-us">About Us</Link>
+              </li>
+              <li>
+                <Link href="/connect-us">Contact Us</Link>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col gap-[10px] lg:gap-[25px] xl:gap-[30px] h-max">

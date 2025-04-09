@@ -9,25 +9,6 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 export default function ConnectProjectPage() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    company: "",
-    projectDetails: "",
-  });
-
-  // Handle input change
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Handle form submission (Future API integration)
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-  };
-
   return (
     <div className="py-8 lg:py-12">
       <Heading
@@ -76,7 +57,7 @@ export default function ConnectProjectPage() {
         {/* Form Section */}
 
         <div className="w-full flex flex-col md:3 lg:2/3  h-full">
-          <div className="flex flex-col items-center justify-center block md:hidden ">
+          <div className="flex flex-col items-center justify-center  md:hidden ">
             <Image
               src={"/supporttaLogo.png"}
               alt="Supportta_Logo"
@@ -85,7 +66,7 @@ export default function ConnectProjectPage() {
               className="mb-12 block lg:hidden"
             />
 
-            <h3 className="font-[raleway] font-[500] text-[18px] text-[#131122E5] mb-2 text-center"> 
+            <h3 className="font-[raleway] font-[500] text-[18px] text-[#131122E5] mb-2 text-center">
               HAVE A PROJECT ?
             </h3>
             <p className="font-[raleway] font-[500] text-[12px] text-[#13112299] text-center">
@@ -93,195 +74,12 @@ export default function ConnectProjectPage() {
             </p>
           </div>
           <ContactForm />
-          {/* <form className="space-y-4">
-            <TextField
-              label="Full Name"
-              name="fullName"
-              variant="standard"
-              fullWidth
-              value={formData.fullName}
-              onChange={handleChange}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "#E0E3E7", // Default border color
-                  borderBottomWidth: "2px",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "#B2BAC2 !important", // Hover state
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A !important", // Focused state
-                },
-                "& .MuiInputBase-root": {
-                  height: "40px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                },
-                "& .MuiInputBase-input": {
-                  fontSize: "16px",
-                },
-              }}
-            />
-
-            <TextField
-              label="Email ID"
-              name="email"
-              type="email"
-              variant="standard"
-              fullWidth
-              value={formData.email}
-              onChange={handleChange}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "#E0E3E7", // Default border color
-                  borderBottomWidth: "2px",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "#B2BAC2 !important", // Hover state
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A !important", // Focused state
-                },
-                "& .MuiInputBase-root": {
-                  height: "40px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                },
-                "& .MuiInputBase-input": {
-                  fontSize: "16px",
-                },
-              }}
-            />
-            <TextField
-              label="Phone Number"
-              name="phone"
-              type="tel"
-              variant="standard"
-              fullWidth
-              value={formData.phone}
-              onChange={handleChange}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "#E0E3E7", // Default border color
-                  borderBottomWidth: "2px",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "#B2BAC2 !important", // Hover state
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A !important", // Focused state
-                },
-                "& .MuiInputBase-root": {
-                  height: "40px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                },
-                "& .MuiInputBase-input": {
-                  fontSize: "16px",
-                },
-              }}
-            />
-            <TextField
-              label="Company Name"
-              name="company"
-              variant="standard"
-              fullWidth
-              value={formData.company}
-              onChange={handleChange}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "#E0E3E7", // Default border color
-                  borderBottomWidth: "2px",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "#B2BAC2 !important", // Hover state
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A !important", // Focused state
-                },
-                "& .MuiInputBase-root": {
-                  height: "40px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                },
-                "& .MuiInputBase-input": {
-                  fontSize: "16px",
-                },
-              }}
-            />
-            <TextField
-              label="Project Details"
-              name="projectDetails"
-              variant="standard"
-              fullWidth
-              multiline
-              rows={4}
-              value={formData.projectDetails}
-              onChange={handleChange}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "rgba(0, 0, 0, 0.30)",
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#20973A",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottomColor: "#E0E3E7", // Default border color
-                  borderBottomWidth: "2px",
-                },
-                "& .MuiInput-underline:hover:before": {
-                  borderBottomColor: "#B2BAC2 !important", // Hover state
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#20973A !important", // Focused state
-                },
-                "& .MuiInputBase-root": {
-                  height: "100px",
-                  // marginTop: "20px",
-                  // marginBottom: "20px",
-                },
-                "& .MuiInputBase-input": {
-                  fontSize: "16px",
-                },
-              }}
-            />
-          </form>
-          <div className="flex justify-start mt-8">
-            <ButtonPage
-              btnName="Let's Connect"
-              className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-2 "
-            />
-          </div>{" "} */}
         </div>
       </div>
 
       {/* image section */}
       <div className="flex flex-col justify-center items-center ">
-        <p className="font-[medium] font-[raleway] text-[14px] lg:text-[26px] mx-auto container text-center px-4 lg:px-[120px]">
+        <p className=" font-[raleway] text-[14px] lg:text-[26px] mx-auto container text-center px-4 lg:px-[120px]">
           Our team will get back to you as soon as possible.
         </p>
         <div className=" relative flex items-center justify-center w-[86.75%] aspect-[1/.28] mt-12  mx-auto container ">
