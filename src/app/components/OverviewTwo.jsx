@@ -22,9 +22,9 @@ function OverviewTwo() {
             .map((details, i) => (
               <div
                 key={`${index}-${i}`}
-                className=" flex flex-col sm:flex-row  items-start justify-between gap-[50px] w-full  py-[50px] lg:py-[30px]  px-6 md:px-12 lg:px-[50px] xl:px-[120px] lg:mx-auto lg:container"
+                className=" flex flex-col sm:flex-row  items-start justify-between gap-[50px] w-full  py-[50px] lg:py-[30px]  px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] lg:mx-auto lg:container"
               >
-                <div className=" flex flex-col gap:[10px] lg:gap-[35px] w-auto w-full sm:w-[40%] lg:w-[54.1%]">
+                <div className=" flex flex-col gap:[10px] lg:gap-[35px]  w-full sm:w-[40%] lg:w-[54.1%]">
                   <div className="uppercase font-[inter] text-[#e08f34] font-semibold text-[12px] sm:text-[22px] lg:text-[32px] xl:text-[36px]  text-center sm:text-start">
                     {details.title1}
                   </div>

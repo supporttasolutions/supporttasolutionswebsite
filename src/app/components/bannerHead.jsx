@@ -1,8 +1,16 @@
 import ButtonPage from "./ButtonPage";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
-
-export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,page }) {
+export default function BannerHead({
+  head,
+  desc,
+  buttons,
+  buttonsMob,
+  longDesc,
+  page,
+}) {
+  console.log(  buttons, "buttons");
   return (
     <div className="font-[inter] px-6 md:px-16 bg-white flex flex-col items-start sm:items-center md:items-center lg:items-center mx-auto container">
       <h1
@@ -23,7 +31,7 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
       )}
       {/* 🟢 MOBILE: If buttonsMob exist, show them WITH longDesc in a column */}
       {buttonsMob?.length > 0 ? (
-        <div className="block lg:hidden  mt-8 flex flex-col flex-col-reverse gap-8">
+        <div className="flex lg:hidden  mt-8  flex-col-reverse gap-8">
           {longDesc && (
             <p className="text-justify  sm:text-center font-regular font-[inter] text-[16px] lg:text-[18px] text-[rgba(19,17,34,0.6)] w-full capitalize">
               {longDesc}
@@ -31,16 +39,24 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
           )}
           <div className="flex flex-col justify-start sm:justify-center sm:items-center gap-4">
             {buttonsMob.map((btn, index) => (
-              <ButtonPage key={index} btnName={btn.text} className={btn.className} />
+              <ButtonPage
+                key={index}
+                btnName={btn.text}
+                className={btn.className}
+              />
             ))}
           </div>
         </div>
       ) : (
         // 🟡 MOBILE: If only `buttons` exist (same as large screens, but column layout)
-        <div className="block lg:hidden w-full mt-8 flex flex-col lg:justify-center items-start sm:items-center md:items-center lg:items-center gap-4">
+        <div className="flex lg:hidden w-full mt-8  flex-col lg:justify-center items-start sm:items-center md:items-center lg:items-center gap-4">
           {buttons?.length > 0 ? (
             buttons.map((btn, index) => (
-              <ButtonPage key={index} btnName={btn.text} className={btn.className} />
+              <ButtonPage
+                key={index}
+                btnName={btn.text}
+                className={btn.className}
+              />
             ))
           ) : (
             <p className="text-start lg:text-center w-full items-center font-regular font-[inter] text-[16px] lg:text-[18px] text-[rgba(19,17,34,0.6)] capitalize ">
@@ -55,7 +71,9 @@ export default function BannerHead({ head, desc, buttons, buttonsMob, longDesc ,
         {buttons?.length > 0 ? (
           <div className="flex flex-row justify-center gap-12 mt-8">
             {buttons.map((btn, index) => (
-              <ButtonPage key={index} btnName={btn.text} className={btn.className} />
+              <Link key={index} href={btn.href}>
+                <ButtonPage btnName={btn.text} className={btn.className} />
+              </Link>
             ))}
           </div>
         ) : (

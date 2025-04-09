@@ -17,7 +17,7 @@ function MissionVision() {
     },
   ];
   return (
-    <div className=" container mx-auto w-full py-[40px] lg:py-[80px] px-4   md:px-12 lg:px-[50px] xl:px-[120px]  flex items-center justify-center">
+    <div className=" container mx-auto w-full py-[40px] lg:py-[80px] px-[16px]  md:px-[40px] lg:px-[50px] xl:px-[120px]  flex items-center justify-center">
       <div className="w-[100%]  flex-wrap flex ">
         <div className=" flex flex-col lg:flex-row gap-[40px] lg:gap-[60px] ">
           {ourMissionVision.map((details, index) => (

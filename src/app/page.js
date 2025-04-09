@@ -1,3 +1,4 @@
+"use client";
 import Banner from "./components/Banner";
 import Connect from "./components/Connect";
 import OurStack from "./components/OurStack";
@@ -16,8 +17,8 @@ export default function Home() {
      
         <Socialmedia />
         <Banner />
-        <section className="relative">
-          <div className="absolute bottom-0 left-0 w-full h-[150px] 2xl:h-[180px]  bg-gradient-to-b from-transparent to-white"></div>
+        <section className="relative hidden sm:block ">
+          <div className="relative top-0 left-0 w-full h-[120px] 2xl:h-[150px] bg-black bg-gradient-to-b from-transparent to-white"></div>
         </section>
 
         <WhoAreWe />

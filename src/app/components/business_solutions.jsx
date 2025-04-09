@@ -39,7 +39,7 @@ export default function SolutionsPage() {
       id="white-section"
       className=" w-full  flex items-center justify-center bg-[#FDF9F3]   mt-16 lg:mt-8  "
     >
-      <div className=" w-full flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px]  container  py-8 lg:py-[80px] px-6 lg:px-[50px] xl:px-[120px]">
+      <div className=" w-full flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px]  container  py-8 lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px]">
         <Image
           src={"/supporttaLogo.png"}
           alt="Supportta_Logo"
@@ -55,11 +55,11 @@ export default function SolutionsPage() {
         />
 
         <div className="flex justify-between w-full h-auto">
-          <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 ">
+          <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 ">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md w-full  max-w-[930px] mx-auto min-h-[285px] border border-[#F5E9DA] transition-transform duration-300 hover:scale-[1.05]"
+                className="bg-white p-6 rounded-lg shadow-md w-full  max-w-[930px] mx-auto min-h-[250px] border border-[#F5E9DA] transition-transform duration-300 hover:scale-[1.05]"
               >
                 <div className="flex justify-center md:justify-start">
                 <div className="flex justify-center bg-[#FDF9F5] w-20 h-20 lg:w-22 lg:h-22 xl:w-24 xl:h-24 rounded-full">

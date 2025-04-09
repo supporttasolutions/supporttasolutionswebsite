@@ -35,7 +35,7 @@ export default function ConnectProjectPage() {
         description="Give Your Ideas Life!"
       />
 
-      <div className="flex flex-col md:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-6  md:px-8 lg:px-[120px] mx-auto container">
+      <div className="flex flex-col md:flex-row gap-8 items-center w-full py-[30px] lg:py-[80px] px-[16px]  md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto container">
         {/* Contact Details Section */}
         <div className="bg-[#FCEED7] p-3 md:p-10  w-full md:2/3 lg:w-2/3   h-auto md:h-150 rounded-l-lg ">
           <div className="flex flex-wrap gap-2 sm:flex-row md:flex-col  lg:bg-[#FCEED7] px-2 lg:p-0 xl:p-6 lg:rounded-lg space-y-6 lg:space-y-4">

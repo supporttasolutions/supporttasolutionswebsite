@@ -1,10 +1,12 @@
-export default function ButtonPage({ btnName, className, onHandleClick }) {
+export default function ButtonPage({ btnName, className, onHandleClick, disabled }) {
   return (
     <button
       onClick={onHandleClick}
       type="submit"
+      disabled={disabled}
       className={`relative text-[#20973A] 
-        text-sm md:text-base font-[inter] rounded-lg md:rounded-[10px] ${className}`}
+        text-sm md:text-base font-[inter] rounded-lg md:rounded-[10px] ${className} cursor-pointer
+        ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       style={{
         borderRadius: "10px",
       }}

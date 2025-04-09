@@ -16,11 +16,13 @@ function page() {
                 text: "Free Consultation",
                 className:
                   "bg-linear-to-t from-[#20973A] to-[#326F46] text-white w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
+                href: "/connect-us",
               },
               {
                 text: "Our services",
                 className:
                   "text-linear-to-t from-[#20973A] to-[#326F46] font-[600] w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
+                href: "/services",
               },
             ]}
             desc={
@@ -33,16 +35,15 @@ function page() {
           <MissionVision />{" "}
         </section>
         <section className=" lg:mt-0 xl:mt-28 hidden lg:block">
-        <Overview />
+          <Overview />
         </section>
         <section className="mt-16 lg:mt-28">
-        <OverviewTwo />
+          <OverviewTwo />
         </section>
         <section className="mt-16 lg:mt-28">
-        <Connect />
+          <Connect />
         </section>
       </div>
-
     </>
   );
 }

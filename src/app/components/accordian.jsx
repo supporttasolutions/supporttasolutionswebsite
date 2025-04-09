@@ -61,20 +61,20 @@ const AccordionDetails = styled(MuiAccordionDetails)(() => ({
 // });
 
 const StyledTypography = styled(Typography)`
-  font-size: 34px; /* Default for large screens */
+  font-size: 28px; 
   font-weight: regular;
   font-family: var(--font-raleway);
 
   @media (max-width: 1024px) {
-    font-size: 28px; /* Medium screens (tablets) */
+    font-size: 24px; 
   }
 
   @media (max-width: 768px) {
-    font-size: 24px; /* Small screens (large phones) */
+    font-size: 20px;
   }
 
   @media (max-width: 480px) {
-    font-size: 20px; /* Extra small screens (mobile) */
+    font-size: 16px; 
   }
 `;
 
@@ -89,7 +89,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div className=''>
+    <div className='w-full'>
       {[
         "Customer-First Solutions",
         "Agility Strategy Development",

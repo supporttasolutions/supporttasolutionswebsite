@@ -6,15 +6,15 @@ function WhoAreWe() {
   return (
     <section
       id="white-section"
-      className=" w-full  flex items-center justify-between  lg:py-[80px] bg-white"
+      className=" w-full  flex items-center justify-between  lg:py-[80px] bg-white mt-4 "
     >
-      <div className=" w-full mx-auto container  px-6 lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center lg:gap-[60px] ">
+      <div className=" w-full mx-auto container  px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center lg:gap-[60px] ">
         <Heading
           description={'We Transform Ideas Into Powerful Digital Realities'}
           heading={'Who are we'}
         />
-        <div className="flex flex-col-reverse lg:flex-row justify-between gap-8 md:gap-16 w-full  h-auto mt-10 lg:mt-0">
-          <div className="lg:w-full text-[14px] lg:text-[20px] xl:text-[24px] text-justify text-[#13112299] font-normal font-[inter]">
+        <div className="flex flex-col-reverse md:flex-row justify-between gap-8 md:gap-2 w-full  h-auto mt-10 lg:mt-0">
+          <div className="w-full text-[14px] lg:text-[20px] xl:text-[24px] text-justify text-[#13112299] font-normal font-[inter]">
             The future belongs to those who innovate – and that’s where we come
             in. With a team of young, dynamic minds, we turn your ideas into
             digital realities that inspire and deliver. Every project is a that
@@ -27,14 +27,14 @@ function WhoAreWe() {
             Let’s build something extraordinary
           </div>
           <div
-            className={`${whoWeAreStyle.imagedivLarge} w-full relative flex items-center justify-center hidden lg:block`}
+            className={`${whoWeAreStyle.imagedivLarge} w-full relative flex items-center justify-center hidden md:block`}
           >
             <div className={``}></div>
             <Image
               src="/who-are-we.png"
               width={500}
               height={500}
-              className="relative left-1/2 transform -translate-x-1/2 object-cover rounded-[20px] lg:w-[340px] xl:w-[380px] "
+              className="relative left-1/2 transform -translate-x-1/2 object-cover rounded-[20px] md:w-[250px] lg:w-[340px] xl:w-[380px] "
               alt=""
             />
           </div>
@@ -43,7 +43,7 @@ function WhoAreWe() {
 
 
           {/* Image Section with Overlapping Effect */}
-          <div className={`${whoWeAreStyle.imagediv} relative w-full flex items-center justify-center block lg:hidden`}>
+          <div className={`${whoWeAreStyle.imagediv} relative w-full flex items-center justify-center block md:hidden`}>
             {/* Main Image */}
             <Image
               src="/whoare.png"

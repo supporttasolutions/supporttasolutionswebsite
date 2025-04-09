@@ -21,7 +21,7 @@ function OurStack() {
       id="white-section"
       className="  w-full inter flex items-center justify-center bg-[#FDF9F3] mt-16 lg:mt-8"
     >
-      <div className=" w-full mx-auto flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px] container py-12 lg:py-[80px] px-6 lg:px-[50px] xl:px-[120px]">
+      <div className=" w-full mx-auto flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px] container py-12 lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px]">
         <Heading
           description={'The Technologies behind our Innovation'}
           heading={'our stack'}

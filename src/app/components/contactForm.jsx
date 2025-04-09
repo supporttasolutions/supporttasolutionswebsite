@@ -11,6 +11,8 @@ export default function ContactForm() {
     company: "",
     projectDetails: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,30 +20,42 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+  
+    setIsSubmitting(true);
   
     const scriptURL = "https://script.google.com/macros/s/AKfycbwnPbImFKoJtV6cg17zLSovbQTXm4oVEFY9yiLfHVrmAL7lBq8o5nYL4I6P61p6m9R0-g/exec";
   
     try {
-      const response = await fetch(scriptURL, {
+      await fetch(scriptURL, {
         method: "POST",
-        mode: "no-cors", // Google Apps Script requires no-cors
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
   
-      // You won't get a response in no-cors, so use toast or alert as feedback
       alert("Form submitted successfully!");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        company: "",
+        projectDetails: "",
+      });
     } catch (error) {
       console.error("Error submitting form", error);
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
   
+  
   return (
     <form
-      className="space-y-4 w-full font-[raleway] px-6"
+      className="space-y-4 w-full font-[raleway]"
       onSubmit={handleSubmit}
     >
       <TextField
@@ -237,6 +251,7 @@ export default function ContactForm() {
         <ButtonPage
           btnName="Let's Connect"
           className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-4 py-3 w-full lg:w-[250px] "
+          disabled={isSubmitting}
         />
       </div>
     </form>

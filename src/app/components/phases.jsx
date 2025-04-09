@@ -61,7 +61,7 @@ export default function Phases() {
   }, [refs]);
 
   return (
-    <div className="container mx-auto w-full py-]10px] lg:py-[80px] px-6 md:px-[20px] lg:px-[50px] xl:px-[120px] ">
+    <div className="container mx-auto w-full py-]10px] lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] ">
       <div className="flex justify-center">
         <Heading heading="Phases" description="How do we work as a team!" />
       </div>
