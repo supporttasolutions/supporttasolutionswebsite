@@ -37,7 +37,7 @@ export default function Navbar() {
           : "bg-white text-black shadow-md"
       } fixed w-full top-0 left-0 z-50 transition-all duration-300`}
     >
-      <div className="container mx-auto flex  md:justify-between  lg:justify-center xl:justify-between items-center lg:gap-20 py-[10px] lg:py-2 px-[20px] lg:px-[50px] xl:px-[120px] h-[70px]">
+      <div className="container mx-auto flex  justify-between items-center lg:gap-20 py-[10px] lg:py-2 px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] h-[70px]">
         {/* Mobile Menu Icon */}
         <div className="flex lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="absolute left-1/2 -translate-x-1/2 lg:-translate-x-0  top-1 lg:static">
           <Link href="/">
             <Image
-              src="/Logo.png"
+              src={isTransparent ? "/logo.svg" : "/Logo.png"}
               alt="Company Logo"
               width={121}
               height={57}
@@ -70,7 +70,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`hover:text-[#A96619] ${
-                pathname === link.href ? "text-[#A96619] font-bold" : ""
+                pathname === link.href ? "text-[#A96619] font-semibold" : "font-normal"
               }`}
             >
               {link.name}

@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import ButtonPage from "./ButtonPage";
 import Heading from "./Heading";
+import Link from "next/link";
 
 export default function ServicesSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -48,7 +49,7 @@ export default function ServicesSlider() {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] px-6 lg:py-[80px] lg:px-[50px] xl:px-[120px] mx-auto lg-white-bg">
+    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto lg-white-bg">
       {/* <div
       className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w- h-[300px]  container py-[30px] lg:py-[80px] px-3 lg:px-[120px] mx-auto"
     > */}
@@ -109,10 +110,13 @@ export default function ServicesSlider() {
                 </div>
 
                 <div className="flex justify-end mt-2">
+                  <Link href={"/connect-us"}>
                   <ButtonPage
                     btnName="Let's Connect"
                     className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white px-8 py-2 block md:hidden"
                   />
+                  </Link>
+                 
                 </div>
               </div>
             </SwiperSlide>
@@ -137,10 +141,12 @@ export default function ServicesSlider() {
                 {services[activeIndex].description}
               </p>
               <div className="mt-6">
+              <Link href={"/connect-us"}>
                 <ButtonPage
                   className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-4 py-3 md:px-4 md:py-3 cursor-pointer"
                   btnName={"Let’s Connect"}
                 />
+                </Link>
               </div>
             </div>
             {/* Right: Image */}

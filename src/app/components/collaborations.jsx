@@ -19,16 +19,16 @@ export default function CollaborationsPage() {
   return (
     <section
       id="white-section"
-      className=" w-full inter lg:py-[80px] bg-white  mt-16 lg:mt-8 "
+      className=" w-full inter lg:py-[80px] bg-white  mt-16 lg:mt-8  "
     >
-      <h2 className="text-2xl md:text-4xl font-medium  px-6 lg:px-[50px] xl:px-[120px] font-[raleway] text-center mx-auto w-full text-[#E08F34E5] break-words capitalize">
+      <h2 className="text-2xl md:text-4xl font-medium  font-[raleway] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] text-center mx-auto w-full text-[#E08F34E5] break-words capitalize container">
         We are privileged to collaborate with the best, delivering <br />{' '}
         excellence every step of the way.
       </h2>
 
       <div className="bg-[#FDF9F3] mt-8 py-8 ">
         {/* <div className="flex justify-center"> */}
-        <div className=" container mx-auto px-6 lg:px-[50px] xl:px-[120px] flex flex-wrap justify-center lg:justify-center xl:justify-between items-center gap-[50px] w-full ">
+        <div className=" container mx-auto flex flex-wrap justify-between items-center px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] w-full ">
           {collaborators.map((collaborator, index) => (
             <div
               key={index}

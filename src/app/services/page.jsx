@@ -14,11 +14,14 @@ export default function Services() {
               text: "Free Consultation",
               className:
                 "bg-linear-to-t from-[#20973A] to-[#326F46] text-white w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 cursor-pointer",
+                href:"/connect-us"
             },
             {
               text: "Let’s Build Together",
               className:
                 "text-linear-to-t from-[#20973A] to-[#326F46] font-[600] w-[200px] lg:w-[250px] px-3 py-3 md:px-4 md:py-3 ",
+                href:"/connect-us"
+
             },
           ]}
         />

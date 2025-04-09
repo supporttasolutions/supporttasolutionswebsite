@@ -11,7 +11,7 @@ function Connect() {
       id="white-section"
       className="bg-[#E08F340F] 2xl:min-h-auto lg:min-h-screen w-full  flex items-center justify-center lg:py-[80px]"
     >
-      <div className=" w-[100%] flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] container">
+      <div className=" w-full flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto container">
         <Image
           src={"/supporttaLogo.png"}
           alt="Supportta_Logo"

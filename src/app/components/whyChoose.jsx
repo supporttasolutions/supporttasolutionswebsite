@@ -8,17 +8,17 @@ export default function WhyChoose() {
       id="white-section"
       className="w-full  flex items-center justify-center bg-white mt-16 lg:mt-8"
     >
-      <div className=" w-full mx-auto px-6 lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center py-8 lg:py-[80px] gap-[20px] md:gap-[30px] lg:gap-[50px] container">
+      <div className=" w-full mx-auto px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center py-8 lg:py-[80px] gap-[20px] md:gap-[30px] lg:gap-[50px] container">
         <Heading
           heading="why choose us"
           description={'Your Trusted Partner for Business Success'}
         />
-        <div className="flex flex-col-reverse lg:flex-row justify-between gap-4  h-auto">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4  h-auto">
           {/* <div className="flex justify-center items-center "> */}
           {/* <div className=" container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2  w-full gap-6"> */}
             <CustomizedAccordions />
 
-          <div className=" flex justify-center py-4">
+          <div className="w-full flex justify-center  py-4">
             <Image
               src="/accordian_img.png"
               alt="accordian_Image"

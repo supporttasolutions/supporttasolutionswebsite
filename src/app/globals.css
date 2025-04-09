@@ -2,6 +2,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* .raleway{
     font-family: "Raleway", sans-serif;
 }
@@ -13,21 +18,20 @@
 } */
 
 .SwiperDiv .swiper {
-    overflow: hidden; /* Default behavior */
+  overflow: hidden; /* Default behavior */
+}
+
+/* On mobile screens, ensure overflow is controlled properly */
+@media (max-width: 640px) {
+  .swiper-wrapper {
+    height: 180px;
   }
-  
-  /* On mobile screens, ensure overflow is controlled properly */
-  @media (max-width: 640px) {
-    .swiper-wrapper
-    {
-      height: 180px;
-    }
-    .SwiperDiv .swiper {
-      overflow: clip; /* Prevents unwanted overflow but doesn't affect layout */
-      height: 200px;
-    }
+  .SwiperDiv .swiper {
+    overflow: clip; /* Prevents unwanted overflow but doesn't affect layout */
+    height: 200px;
   }
-  /* SwiperDiv.swiper {
+}
+/* SwiperDiv.swiper {
   overflow: hidden !important;
 }
 @media (max-width: 640px) {
@@ -42,4 +46,23 @@
   }
 }
 
+@media (max-width: 350px) {
+  .bannerHeadingMain {
+    font-size: 14vw;
+  }
+  .bannerHeading {
+    font-size: 9vw;
+  }
+  .bannerHeadingSub {
+    font-size: 5vw;
+  }
+}
+.bannerHeading::after {
+  color: white !important;
+}
 
+@media (max-width: 2000px) {
+  .container {
+    max-width: 2000px;
+  }
+}

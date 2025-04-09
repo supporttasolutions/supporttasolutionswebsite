@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Overview() {
   return (
-    <div className="  mx-auto container w-full py-[80px] px-6 md:px-12 lg:px-[50px] xl:px-[120px] ">
+    <div className="  mx-auto container w-full py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] ">
       <div className="flex flex-col items-center justify-center lg:gap-[50px] xl:gap-[80px] w-[100%]">
         <Heading
           heading={"Overview"}

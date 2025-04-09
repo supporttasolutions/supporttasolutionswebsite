@@ -5,18 +5,19 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 function Socialmedia() {
   const [topColor, setTopColor] = useState("white");
   const [bottomColor, setBottomColor] = useState("white");
+  const [hideIcons, setHideIcons] = useState(false);
 
   const handleScroll = () => {
     const middleY = window.innerHeight / 2;
-    const topY = middleY - 70; // Approximate top of the line
-    const bottomY = middleY + 70; // Approximate bottom of the line
+    const topY = middleY - 70;
+    const bottomY = middleY + 70;
     const centerX = window.innerWidth / 2;
 
     const topElement = document.elementFromPoint(centerX, topY);
     const bottomElement = document.elementFromPoint(centerX, bottomY);
 
     const getBackgroundColor = (element) => {
-      if (!element) return "rgb(255, 255, 255)"; // Default white
+      if (!element) return "rgb(255, 255, 255)";
       let bgColor = window.getComputedStyle(element).backgroundColor;
       while (
         (bgColor === "rgba(0, 0, 0, 0)" || bgColor === "rgb(19, 17, 34)") &&
@@ -47,23 +48,51 @@ function Socialmedia() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHideIcons(entry.isIntersecting); // Hide if footer is in view
+      },
+      { threshold: 0.1 }
+    );
+
+    const footer = document.querySelector("footer");
+    if (footer) {
+      observer.observe(footer);
+    }
+
+    return () => {
+      if (footer) observer.unobserve(footer);
+    };
+  }, []);
+
   return (
-    <div className="hidden lg:flex fixed z-50 flex items-center justify-center flex-col gap-[20px] translate-x-[20px] translate-y-[50%]">
+    <div
+      className={`hidden lg:flex fixed z-50 flex-col items-center justify-center gap-[20px] translate-x-[20px] translate-y-[50%] transition-opacity duration-300 ${
+        hideIcons ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
       <FaFacebook
-        className={`lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer`} 
+        className="lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer"
         style={{ color: topColor }}
       />
       <FaLinkedin
-        className={`lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer`} 
+        className="lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer"
         style={{ color: topColor }}
       />
       <FaInstagram
-        className={`lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer`} 
+        className="lg:w-[22px] lg:h-[22px] xl:w-[24px] xl:h-[24px] cursor-pointer"
         style={{ color: topColor }}
       />
       <div className="relative h-[141px] w-[2px]">
-        <div className="absolute top-0 h-[70px] w-full" style={{ backgroundColor: topColor }}></div>
-        <div className="absolute bottom-0 h-[70px] w-full" style={{ backgroundColor: bottomColor }}></div>
+        <div
+          className="absolute top-0 h-[70px] w-full"
+          style={{ backgroundColor: topColor }}
+        ></div>
+        <div
+          className="absolute bottom-0 h-[70px] w-full"
+          style={{ backgroundColor: bottomColor }}
+        ></div>
       </div>
       <div className="relative h-[24px] w-auto">
         <div
