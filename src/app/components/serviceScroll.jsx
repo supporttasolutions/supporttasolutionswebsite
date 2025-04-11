@@ -49,18 +49,18 @@ export default function ServicesSlider() {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w-full h-[400px] lg:h-auto container py-[30px] lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto lg-white-bg">
+    <div className=" bg-[#FDF9F3] lg:bg-gradient-to-b from-white via-[#FFE9D0] to-white  w-full h-[350px] lg:h-auto container py-[30px] lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto lg-white-bg">
       {/* <div
       className="bg-gradient-to-b from-white via-[#FFE9D0] to-white w- h-[300px]  container py-[30px] lg:py-[80px] px-3 lg:px-[120px] mx-auto"
     > */}
       <div className="block lg:hidden ">
-        <Heading heading={"Services we scroll"} />
+        <Heading heading={"Services we provide"} />
       </div>
-      <div className="py-4 px-2  lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center SwiperDiv">
+      <div className="py-4 px-2   bg-white lg:bg-gradient-to-b from-[#F7F7F7] via-[#F7F7F7] to-[#FFE9D0] rounded-lg items-center SwiperDiv">
         <Swiper
           slidesPerView={1} // Default (mobile screens < 640px)
           loop={true}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          // autoplay={{ delay: 3500, disableOnInteraction: false }}
           modules={[Autoplay]}
           breakpoints={{
             400: { slidesPerView: 1.2, spaceBetween: 15 },
@@ -75,10 +75,10 @@ export default function ServicesSlider() {
           {services.map((service, index) => (
             <SwiperSlide key={index} className="display-flex justify-center ">
               <div
-                className={`p-6 lg:p-4 w-full h-[180px] lg:h-[150px]  rounded-lg cursor-pointer transition-all duration-300 ${
+                className={`px-4 py-2 lg:p-4 w-full h-[180px] lg:h-[150px]  rounded-lg cursor-pointer transition-all duration-300 ${
                   activeIndex === index
                     ? "bg-white shadow-[10px_10px_10px_0px_#00000014]"
-                    : " bg-white lg:bg-[#DDDDDD]"
+                    : " bg-white lg:bg-[#e6e6e7]"
                 } `}
                
               >
@@ -143,7 +143,7 @@ export default function ServicesSlider() {
               <div className="mt-6">
               <Link href={"/connect-us"}>
                 <ButtonPage
-                  className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-4 py-3 md:px-4 md:py-3 cursor-pointer"
+                  className="bg-linear-to-t from-[#20973A] to-[#326F46] text-white  w-[200px] lg:w-[250px]  px-4 py-2 md:px-4 md:py-3 cursor-pointer"
                   btnName={"Let’s Connect"}
                 />
                 </Link>

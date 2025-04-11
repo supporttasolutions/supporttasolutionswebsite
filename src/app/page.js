@@ -17,7 +17,7 @@ export default function Home() {
      
         <Socialmedia />
         <Banner />
-        <section className="relative hidden sm:block ">
+        <section className="relative  ">
           <div className="relative top-0 left-0 w-full h-[120px] 2xl:h-[150px] bg-black bg-gradient-to-b from-transparent to-white"></div>
         </section>
 

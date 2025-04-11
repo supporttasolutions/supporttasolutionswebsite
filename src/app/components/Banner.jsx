@@ -27,23 +27,24 @@ function Banner() {
               </div>
               <TypeAnimation
                 sequence={[
+                  "E-commerce...",
+                  2000,
+                  "Digital Marketing...",
+                  2000,
                   "Web Development...",
                   2000,
                   "App Development...",
                   2000,
                   "UI / UX Design...",
                   2000,
-                  "Digital Marketing...",
-                  2000,
-                  "E-commerce...",
-                  2000,
+                  
                 ]}
                 speed={195}
                 deletionSpeed={195}
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                className="sm:text-[4.5vw] lg:text-[47px] xl:text-[64px] md:text-[40px] text-[36px] font-semibold font-[raleway] text-[#E08F34] sm:w-max bannerHeading"
+                className="sm:text-[4.5vw] lg:text-[47px] xl:text-[64px] md:text-[40px] text-[40px] font-semibold font-[raleway] text-[#E08F34] sm:w-max bannerHeading"
               />
             </div>
             <div className="flex flex-col lg:gap-[40px] xl:gap-[50px] gap-[50px] lg:w-[76%] sm:w-[85%] font-[inter] w-full">

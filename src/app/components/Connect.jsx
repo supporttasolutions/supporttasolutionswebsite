@@ -13,7 +13,7 @@ function Connect() {
     >
       <div className=" w-full flex flex-col items-center justify-center lg:gap-[60px] xl:gap-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] mx-auto container">
         <Image
-          src={"/supporttaLogo.png"}
+          src={"/supporttaLogo.svg"}
           alt="Supportta_Logo"
           width={25}
           height={40}

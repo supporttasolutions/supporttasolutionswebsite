@@ -41,19 +41,19 @@ export default function Navbar() {
         {/* Mobile Menu Icon */}
         <div className="flex lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={28} /> : <Menu size={30} />}
+            {menuOpen ? <X size={28} /> : <Menu size={40} />}
           </button>
         </div>
 
         {/* Logo */}
-        <div className="absolute left-1/2 -translate-x-1/2 lg:-translate-x-0  top-1 lg:static">
+        <div className="absolute left-1/2 -translate-x-1/2 lg:-translate-x-0  lg:static">
           <Link href="/">
             <Image
-              src={isTransparent ? "/logo.svg" : "/Logo.png"}
+              src={isTransparent ? "/supporttaLogo.svg" : "/Logo.png"}
               alt="Company Logo"
               width={121}
               height={57}
-              className=" w-[125px] h-[57px] lg:w-[120px] lg:h-[50px]"
+              className=" w-[125px] sm:h-[57px] h-[45px] lg:w-[120px] lg:h-[50px]"
             />
           </Link>
         </div>
@@ -70,7 +70,9 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`hover:text-[#A96619] ${
-                pathname === link.href ? "text-[#A96619] font-semibold" : "font-normal"
+                pathname === link.href
+                  ? "text-[#A96619] font-semibold"
+                  : "font-normal"
               }`}
             >
               {link.name}
@@ -81,30 +83,24 @@ export default function Navbar() {
         {/* Contact Button */}
         <div className="hidden lg:block">
           <button
-            className="relative flex gap-1 items-center text-[#20973A] py-2 px-4 rounded-lg "
+            className="relative flex gap-1 items-center text-[#976220] py-2 px-4 rounded-lg hover:bg-[#FFD3A169] transition-all duration-200"
             style={{
-              position: "relative",
-              background: "transparent", // Keep the inside white
-              borderRadius: "12px", // Make sure this is set
-              // padding: "10px 20px",
+              // background: "transparent",
+              borderRadius: "12px",
             }}
           >
             <span
-              className="absolute inset-0 rounded-lg border-0"
+              className="absolute inset-0 rounded-lg border-0 pointer-events-none"
               style={{
-                content: '""',
-                position: "absolute",
-                inset: 0,
-                borderRadius: "12px",
-                padding: "2px", // Border thickness
-                background: "linear-gradient(180deg, #326F46 0%, #20973A 100%)",
+                padding: "2px",
+                background: "linear-gradient(180deg, #976220, #CC9642)",
                 WebkitMask:
                   "linear-gradient(white 0 0) content-box, linear-gradient(white 0 0)",
                 WebkitMaskComposite: "destination-out",
                 maskComposite: "exclude",
               }}
             ></span>
-            <Phone size={20} strokeWidth={1.75} color="#20973A" />
+            <Phone size={20} strokeWidth={1.75} color="#976220" />
             +91 234557786
           </button>
         </div>
@@ -112,20 +108,22 @@ export default function Navbar() {
 
       {/* Mobile Menu - Smooth Animation */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center space-y-6 z-40 transition-transform duration-600 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center space-y-6 z-40 transition-transform duration-600 ease-in-out bg-white text-black ${
           menuOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-        } ${isTransparent ? "bg-black text-white" : "bg-white text-black"}`}
+        }`}
       >
         {/* Close Button */}
         <button
           onClick={() => setMenuOpen(false)}
-          className={`${isTransparent ? "text-white" :"text-[#131122]"} absolute top-5 right-5  transition-transform duration-600 ease-in-out`}
+          className={`text-[#131122] absolute top-5 right-5  transition-transform duration-600 ease-in-out`}
         >
           <X size={35} />
         </button>
 
         {/* Mobile Nav Links */}
-        <div className={` ${isTransparent ? "text-white" : "text-[#131122]"} flex flex-col items-center  gap-8 text-md font-[inter] uppercase`}>
+        <div
+          className={` text-[#131122] flex flex-col items-center  gap-8 text-md font-[inter] uppercase`}
+        >
           {[
             { name: "Services", href: "/services" },
             { name: "Careers", href: "/careers" },

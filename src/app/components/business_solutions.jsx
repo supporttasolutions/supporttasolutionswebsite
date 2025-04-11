@@ -4,32 +4,32 @@ import Heading from "./Heading";
 export default function SolutionsPage() {
   const cards = [
     {
-      icon: "/custom1.png",
+      icon: "/custom 1.svg",
       head: "Custom Software Development",
       services: ["Product Development", "POC Development"],
     },
     {
-      icon: "/custom2.png",
+      icon: "/custom2.svg",
       head: "Web Development",
       services: ["Web Development", "Node.js", "Next.js"],
     },
     {
-      icon: "/custom3.png",
+      icon: "/custom3.svg",
       head: "Mobile App Development",
       services: ["Flutter", "Android", "iOS"],
     },
     {
-      icon: "/custom4.png",
+      icon: "/custom4.svg",
       head: "UI / UX Design",
       services: ["Figma", "HTML", "CSS"],
     },
     {
-      icon: "/custom5.png",
+      icon: "/custom5.svg",
       head: "E-commerce Development",
       services: ["Shopify", "WooCommerce"],
     },
     {
-      icon: "/custom6.png",
+      icon: "/custom6.svg",
       head: "Digital Marketing",
       services: ["SEO", "Google Ads"],
     },
@@ -41,7 +41,7 @@ export default function SolutionsPage() {
     >
       <div className=" w-full flex flex-col items-center justify-center gap-[20px] md:gap-[30px] lg:gap-[50px]  container  py-8 lg:py-[80px] px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px]">
         <Image
-          src={"/supporttaLogo.png"}
+          src={"/supporttaLogo.svg"}
           alt="Supportta_Logo"
           width={25}
           height={40}

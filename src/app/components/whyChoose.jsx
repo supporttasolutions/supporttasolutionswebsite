@@ -20,7 +20,7 @@ export default function WhyChoose() {
 
           <div className="w-full flex justify-center  py-4">
             <Image
-              src="/accordian_img.png"
+              src="/accordian_img.svg"
               alt="accordian_Image"
               width={500}
               height={450}

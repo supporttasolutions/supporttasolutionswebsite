@@ -59,7 +59,7 @@ export default function ConnectProjectPage() {
         <div className="w-full flex flex-col md:3 lg:2/3  h-full">
           <div className="flex flex-col items-center justify-center  md:hidden ">
             <Image
-              src={"/supporttaLogo.png"}
+              src={"/supporttaLogo.svg"}
               alt="Supportta_Logo"
               width={25}
               height={40}

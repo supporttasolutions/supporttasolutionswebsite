@@ -12,9 +12,9 @@ export default function BannerHead({
 }) {
 
   return (
-    <div className="font-[inter] px-6 md:px-16 bg-white flex flex-col items-start sm:items-center md:items-center lg:items-center mx-auto container">
+    <div className="font-[inter] px-6 md:px-16  flex flex-col items-start sm:items-center md:items-center lg:items-center mx-auto container">
       <h1
-        className="text-[48px] lg:text-[64px] mb-4 lg:mb-0 font-medium leading-[1.2] lg:leading-normal break-words"
+        className="text-[48px] lg:text-[64px] mb-4 lg:mb-2 font-medium leading-[1.2] lg:leading-normal break-words"
         style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
       >
         {head}

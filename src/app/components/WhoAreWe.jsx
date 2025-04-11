@@ -6,7 +6,7 @@ function WhoAreWe() {
   return (
     <section
       id="white-section"
-      className=" w-full  flex items-center justify-between  lg:py-[80px] bg-white mt-4 "
+      className=" w-full  flex items-center justify-between  lg:py-[80px] bg-white mt-16 lg:mt-8"
     >
       <div className=" w-full mx-auto container  px-[16px] md:px-[40px] lg:px-[50px] xl:px-[120px] flex flex-col items-center justify-center lg:gap-[60px] ">
         <Heading
